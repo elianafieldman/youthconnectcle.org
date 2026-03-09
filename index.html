@@ -578,4 +578,16 @@
       'Name: ' + firstName + ' ' + lastName + '\n' +
       'Email: ' + email + '\n' +
       'School/Org: ' + (school || 'Not provided') + '\n' +
-      'Age/Grade: ' + (gra
+      'Age/Grade: ' + (grade || 'Not provided') + '\n' +
+      'I am a: ' + roles.join(', ') + '\n' +
+      'How they heard: ' + (howHeard || 'Not provided')
+    );
+
+    window.location.href = 'mailto:eliana@youthconnectcle.org?subject=' + subject + '&body=' + body;
+
+    document.getElementById('signupForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+</script>
+</body>
+</html>
