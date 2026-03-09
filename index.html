@@ -122,7 +122,7 @@
     .why-inner { max-width: 1000px; margin: 0 auto; }
     .why h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1rem; }
     .why-intro { font-size: 1.05rem; color: var(--muted); line-height: 1.8; max-width: 680px; margin-bottom: 3rem; }
-    .why-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-bottom: 3rem; }
+    .why-cards { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem; }
     .why-card { border-radius: 24px; padding: 2rem; text-align: center; }
     .why-card:nth-child(1) { background: var(--sand); }
     .why-card:nth-child(2) { background: #E8F4EC; }
@@ -137,7 +137,7 @@
     .involve-inner { max-width: 1100px; margin: 0 auto; }
     .involve h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
     .involve-sub { color: var(--muted); font-size: 1rem; margin-bottom: 3rem; }
-    .involve-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.25rem; }
+    .involve-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
     .involve-card { border-radius: 24px; padding: 2.25rem; transition: transform 0.25s, box-shadow 0.25s; }
     .involve-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(59,35,20,0.1); }
     .involve-card.c1 { background: var(--clay); }
@@ -151,6 +151,8 @@
     .involve-desc { font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem; }
     .involve-card.c1 .involve-desc, .involve-card.c3 .involve-desc { color: rgba(255,255,255,0.75); }
     .involve-card.c2 .involve-desc, .involve-card.c4 .involve-desc { color: var(--muted); }
+    .involve-coming { font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.45); font-style: italic; }
+    .involve-card.c2 .involve-coming { color: var(--muted); }
     .involve-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 800; text-decoration: none; padding: 0.55rem 1.25rem; border-radius: 99px; transition: all 0.2s; }
     .involve-card.c1 .involve-link { background: rgba(255,255,255,0.2); color: white; }
     .involve-card.c1 .involve-link:hover { background: rgba(255,255,255,0.35); }
@@ -194,6 +196,80 @@
       .footer-inner { flex-direction: column; align-items: flex-start; }
       .footer-copy { text-align: left; }
     }
+
+    /* ── SIGNUP FORM ── */
+    .signup { background: var(--sand); padding: 6rem 4rem; }
+    .signup-inner { max-width: 700px; margin: 0 auto; }
+    .signup h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+    .signup-sub { color: var(--muted); font-size: 1rem; margin-bottom: 2.5rem; }
+
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 800; color: var(--brown); margin-bottom: 0.4rem; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; padding: 0.85rem 1.1rem;
+      font-family: 'Nunito', sans-serif; font-size: 0.95rem;
+      color: var(--brown); background: white;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(59,35,20,0.06);
+      appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--clay);
+      box-shadow: 0 0 0 4px rgba(200,96,58,0.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .form-check-group { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 0.4rem; }
+    .form-check { display: flex; align-items: center; gap: 0.6rem; cursor: pointer; }
+    .form-check input[type="checkbox"] {
+      width: 18px; height: 18px; border-radius: 5px;
+      border: 2px solid var(--peach); background: white;
+      flex-shrink: 0; cursor: pointer;
+      accent-color: var(--clay);
+      box-shadow: none; padding: 0;
+    }
+    .form-check span { font-size: 0.88rem; color: var(--brown); font-weight: 600; }
+
+    .form-submit { margin-top: 2rem; }
+    .form-submit button {
+      background: var(--clay); color: white;
+      border: none; border-radius: 99px;
+      padding: 0.95rem 2.5rem;
+      font-family: 'Nunito', sans-serif; font-size: 0.95rem; font-weight: 800;
+      cursor: pointer; transition: all 0.2s;
+      box-shadow: 0 4px 16px rgba(200,96,58,0.25);
+    }
+    .form-submit button:hover { background: #b0522e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,96,58,0.35); }
+
+    .form-success {
+      display: none; text-align: center; padding: 3rem 2rem;
+      background: white; border-radius: 24px;
+    }
+    .form-success h3 { font-family: 'Fraunces', serif; font-size: 1.8rem; color: var(--brown); margin-bottom: 0.75rem; }
+    .form-success p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
+
+    @media (max-width: 768px) {
+      .signup { padding: 4rem 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .form-check-group { grid-template-columns: 1fr; }
+    }
+
+    .why-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-bottom: 2rem; }
+    .why-stat-box { background: var(--sand); border-radius: 24px; padding: 2rem 1.75rem; text-align: center; }
+    .why-big-num { font-family: 'Fraunces', serif; font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 900; color: var(--clay); line-height: 1; margin-bottom: 0.6rem; letter-spacing: -0.02em; }
+    .why-stat-box:nth-child(2) .why-big-num { color: var(--sage-dk); }
+    .why-stat-box:nth-child(3) .why-big-num { color: var(--brown); }
+    .why-big-label { font-family: 'Nunito', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--brown); line-height: 1.5; margin-bottom: 0.5rem; }
+    .why-big-source { font-family: 'Nunito', sans-serif; font-size: 0.68rem; color: var(--muted); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    @media (max-width: 768px) { .why-stats { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -204,7 +280,7 @@
     <li><a href="#mission">Mission</a></li>
     <li><a href="#programs">Programs</a></li>
     <li><a href="#why">Why It Matters</a></li>
-    <li><a href="#involve" class="nav-cta">Get Involved</a></li>
+    <li><a href="#signup" class="nav-cta">Sign Up</a></li>
   </ul>
 </nav>
 
@@ -315,25 +391,28 @@
   <div class="why-inner">
     <div class="section-tag fade-up">Why It Matters</div>
     <h2 class="fade-up">Connection is Protection.</h2>
-    <p class="why-intro fade-up">Research consistently shows that strong social connections act as a protective factor for teenagers. Connection doesn't fix everything — but it makes everything easier to face.</p>
-    <div class="why-cards fade-up">
-      <div class="why-card">
-        <div class="why-num">↓</div>
-        <div class="why-card-text">Reduced risk of anxiety and depression in socially connected teens</div>
+    <p class="why-intro fade-up">Research consistently shows that strong social connections act as a protective factor for teenagers — reducing anxiety and depression, increasing engagement, and building resilience that lasts a lifetime.</p>
+
+    <div class="why-stats fade-up">
+      <div class="why-stat-box">
+        <div class="why-big-num">1 in 5</div>
+        <div class="why-big-label">teens feel lonely — more than any other age group</div>
+        <div class="why-big-source">WHO, 2025</div>
       </div>
-      <div class="why-card">
-        <div class="why-num">↑</div>
-        <div class="why-card-text">Increased academic and emotional engagement when teens feel included</div>
+      <div class="why-stat-box">
+        <div class="why-big-num">3×</div>
+        <div class="why-big-label">higher risk of depression or anxiety when isolated</div>
+        <div class="why-big-source">WashU, 2024</div>
       </div>
-      <div class="why-card">
-        <div class="why-num">+</div>
-        <div class="why-card-text">Greater resilience and confidence when navigating life's challenges</div>
+      <div class="why-stat-box">
+        <div class="why-big-num">22%</div>
+        <div class="why-big-label">lower academic performance linked to loneliness</div>
+        <div class="why-big-source">WHO, 2025</div>
       </div>
     </div>
+
     <div class="why-closing fade-up">
       At Youth Connect CLE, we believe every teen in Cleveland deserves access to community, friendship, and spaces where they feel welcomed exactly as they are. By strengthening social health, we aim to help Cleveland's teens feel more connected to each other, to their communities, and to themselves.
-      <br><br>
-      <strong>Connection doesn't fix everything. But it makes everything easier to face.</strong>
     </div>
   </div>
 </section>
@@ -347,26 +426,91 @@
       <div class="involve-card c1 fade-up">
         <div class="involve-title">Attend an Event</div>
         <div class="involve-desc">Check out our upcoming club fairs, expos, and community gatherings. All events are free and open to teens across Greater Cleveland.</div>
-        <a href="#" class="involve-link">See Upcoming Events →</a>
+        <div class="involve-coming">Events calendar coming soon</div>
       </div>
       <div class="involve-card c2 fade-up">
         <div class="involve-title">Volunteer With Us</div>
         <div class="involve-desc">Help us run events, set up spaces, and create welcoming environments for Cleveland teens. No experience needed — just a willingness to show up.</div>
-        <a href="#" class="involve-link">Become a Volunteer →</a>
+        <div class="involve-coming">Sign-up form coming soon</div>
       </div>
       <div class="involve-card c3 fade-up">
-        <div class="involve-title">Support Our Mission</div>
-        <div class="involve-desc">Your donation helps us host more events, reach more teens, and build a stronger, more connected Cleveland. Every contribution matters.</div>
-        <a href="#" class="involve-link">Donate Today →</a>
-      </div>
-      <div class="involve-card c4 fade-up">
-        <div class="involve-title">Partner With Us</div>
-        <div class="involve-desc">Are you a school, org, or community partner? Let's work together to expand our reach and bring more connection opportunities to Cleveland youth.</div>
-        <a href="#" class="involve-link">Reach Out →</a>
+        <div class="involve-title">Get in Touch</div>
+        <div class="involve-desc">Whether you're a teen, parent, school, or community partner — we'd love to hear from you. Reach out to learn more, get involved, or bring Youth Connect CLE to your community.</div>
+        <a href="mailto:eliana@youthconnectcle.org" class="involve-link">eliana@youthconnectcle.org →</a>
       </div>
     </div>
   </div>
 </section>
+
+<section class="signup" id="signup">
+  <div class="signup-inner">
+    <div class="section-tag fade-up">Stay Connected</div>
+    <h2 class="fade-up">Sign Up</h2>
+    <p class="signup-sub fade-up">Whether you're a teen, a volunteer, or a community partner — there's a place for you here. Fill out the form and we'll be in touch.</p>
+
+    <div id="signupForm" class="fade-up">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" placeholder="Your first name" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name *</label>
+          <input type="text" id="lastName" placeholder="Your last name" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" placeholder="you@example.com" required />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="school">School or Organization</label>
+          <input type="text" id="school" placeholder="e.g. Lincoln High School" />
+        </div>
+        <div class="form-group">
+          <label for="grade">Age or Grade</label>
+          <input type="text" id="grade" placeholder="e.g. 16, or 10th grade" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>I am a... *</label>
+        <div class="form-check-group">
+          <label class="form-check"><input type="checkbox" name="role" value="teen" /><span>Teen looking to attend events</span></label>
+          <label class="form-check"><input type="checkbox" name="role" value="volunteer" /><span>Volunteer</span></label>
+          <label class="form-check"><input type="checkbox" name="role" value="partner" /><span>School or community partner</span></label>
+          <label class="form-check"><input type="checkbox" name="role" value="general" /><span>General interest / stay updated</span></label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="howHeard">How did you hear about us?</label>
+        <select id="howHeard">
+          <option value="" disabled selected>Select one</option>
+          <option>Social media</option>
+          <option>Friend or family</option>
+          <option>School or teacher</option>
+          <option>Community event</option>
+          <option>Google search</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-submit">
+        <button type="button" onclick="submitForm()">Send My Info →</button>
+      </div>
+    </div>
+
+    <div class="form-success" id="formSuccess">
+      <h3>You're in! 🌱</h3>
+      <p>Thanks for reaching out. We'll be in touch soon at the email you provided.<br>In the meantime, feel free to reach us directly at <a href="mailto:eliana@youthconnectcle.org" style="color:var(--clay);font-weight:800">eliana@youthconnectcle.org</a>.</p>
+    </div>
+  </div>
+</section>
+
 
 <footer>
   <div class="footer-inner">
@@ -379,8 +523,9 @@
       <a href="#programs">Programs</a>
       <a href="#why">Why It Matters</a>
       <a href="#involve">Get Involved</a>
+      <a href="#signup">Sign Up</a>
     </div>
-    <div class="footer-copy">© 2025 Youth Connect CLE<br>A Cleveland-based nonprofit</div>
+    <div class="footer-copy">© 2026 Youth Connect CLE<br>A Cleveland-based nonprofit</div>
   </div>
 </footer>
 
@@ -389,6 +534,46 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  function submitForm() {
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const roles = [...document.querySelectorAll('input[name="role"]:checked')].map(el => el.value);
+
+    if (!firstName || !lastName || !email) {
+      alert('Please fill in your name and email to continue.');
+      return;
+    }
+    if (!email.includes('@')) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+    if (roles.length === 0) {
+      alert('Please select at least one option for "I am a..."');
+      return;
+    }
+
+    const school = document.getElementById('school').value.trim();
+    const grade = document.getElementById('grade').value.trim();
+    const howHeard = document.getElementById('howHeard').value;
+
+    const subject = encodeURIComponent('New Sign-Up: ' + firstName + ' ' + lastName);
+    const body = encodeURIComponent(
+      'New sign-up from youthconnectcle.org\n\n' +
+      'Name: ' + firstName + ' ' + lastName + '\n' +
+      'Email: ' + email + '\n' +
+      'School/Org: ' + (school || 'Not provided') + '\n' +
+      'Age/Grade: ' + (grade || 'Not provided') + '\n' +
+      'I am a: ' + roles.join(', ') + '\n' +
+      'How they heard: ' + (howHeard || 'Not provided')
+    );
+
+    window.location.href = 'mailto:eliana@youthconnectcle.org?subject=' + subject + '&body=' + body;
+
+    document.getElementById('signupForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
 </script>
 </body>
 </html>
