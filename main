@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Youth Connect CLE</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Fraunces:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --clay:    #C8603A;
+      --peach:   #F5A97F;
+      --sand:    #F7EDE2;
+      --sage:    #7EAE8E;
+      --sage-dk: #4A7A5C;
+      --brown:   #3B2314;
+      --warm-wh: #FDFAF6;
+      --muted:   #8C6E5A;
+      --sky:     #B8D8E8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Nunito', sans-serif; background: var(--warm-wh); color: var(--brown); overflow-x: hidden; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 2.5rem;
+      background: var(--warm-wh);
+      border-bottom: 2px solid var(--sand);
+      box-shadow: 0 2px 20px rgba(59,35,20,0.06);
+    }
+    .nav-logo { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 900; color: var(--brown); letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--clay); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.88rem; font-weight: 700; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--clay); }
+    .nav-cta { background: var(--clay); color: white !important; padding: 0.5rem 1.2rem; border-radius: 99px; }
+    .nav-cta:hover { background: #b0522e !important; }
+
+    .hero {
+      min-height: 100vh; background: var(--sand);
+      display: grid; grid-template-columns: 1.1fr 0.9fr;
+      align-items: center; padding-top: 72px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ""; position: absolute; width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,96,58,0.12) 0%, transparent 70%);
+      top: -100px; right: -100px; pointer-events: none;
+    }
+    .hero::after {
+      content: ""; position: absolute; width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(126,174,142,0.15) 0%, transparent 70%);
+      bottom: -80px; left: 10%; pointer-events: none;
+    }
+    .hero-left { padding: 4rem 3rem 4rem 5rem; position: relative; z-index: 2; }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--sage); color: white; font-size: 0.75rem; font-weight: 800;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.4rem 1rem; border-radius: 99px; margin-bottom: 1.5rem;
+    }
+    .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2.8rem, 5vw, 5rem); color: var(--brown); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+    .hero h1 em { font-style: italic; color: var(--clay); }
+    .hero-sub { font-size: 1.05rem; color: var(--muted); line-height: 1.75; max-width: 440px; margin-bottom: 2.5rem; }
+    .hero-sub strong { color: var(--brown); font-weight: 800; }
+    .btn { display: inline-block; padding: 0.85rem 2rem; font-family: 'Nunito', sans-serif; font-size: 0.9rem; font-weight: 800; text-decoration: none; cursor: pointer; transition: all 0.2s; border: none; border-radius: 99px; }
+    .btn-primary { background: var(--clay); color: white; }
+    .btn-primary:hover { background: #b0522e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,96,58,0.3); }
+    .btn-soft { background: white; color: var(--brown); margin-left: 0.75rem; box-shadow: 0 2px 12px rgba(59,35,20,0.1); }
+    .btn-soft:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(59,35,20,0.15); }
+    .hero-right { position: relative; z-index: 2; padding: 4rem 4rem 4rem 2rem; display: flex; flex-direction: column; gap: 1rem; }
+    .stat-card { background: white; border-radius: 20px; padding: 1.5rem 1.75rem; box-shadow: 0 4px 20px rgba(59,35,20,0.08); display: flex; align-items: center; gap: 1.25rem; transition: transform 0.2s; }
+    .stat-card:hover { transform: translateY(-3px); }
+    .stat-card:nth-child(2) { margin-left: 1.5rem; }
+    .stat-bubble { width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 900; color: white; text-align: center; line-height: 1.2; }
+    .stat-card:nth-child(1) .stat-bubble { background: var(--clay); }
+    .stat-card:nth-child(2) .stat-bubble { background: var(--sage); }
+    .stat-card:nth-child(3) .stat-bubble { background: var(--peach); color: var(--brown); font-size: 0.85rem; }
+    .stat-text-label { font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+
+    .callout { background: var(--clay); padding: 4.5rem 4rem; text-align: center; position: relative; overflow: hidden; }
+    .callout::before, .callout::after { content: "●"; position: absolute; font-size: 20rem; color: rgba(255,255,255,0.04); line-height: 1; pointer-events: none; }
+    .callout::before { top: -6rem; left: -5rem; }
+    .callout::after  { bottom: -6rem; right: -5rem; }
+    .callout-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+    .callout-label { display: inline-block; background: rgba(255,255,255,0.2); color: white; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 99px; margin-bottom: 1.5rem; }
+    .callout h2 { font-family: 'Fraunces', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); color: rgba(255,255,255,0.75); font-weight: 700; font-style: italic; margin-bottom: 0.75rem; line-height: 1.3; }
+    .callout-answer { font-family: 'Fraunces', serif; font-size: clamp(3rem, 7vw, 7rem); color: white; font-weight: 900; line-height: 0.95; letter-spacing: -0.02em; }
+
+    .mission { padding: 6rem 4rem; background: var(--warm-wh); }
+    .mission-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .section-tag { display: inline-block; background: var(--sand); color: var(--clay); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.25rem; }
+    .mission h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+    .mission p { font-size: 1rem; line-height: 1.8; color: var(--muted); margin-bottom: 1.25rem; }
+    .mission p strong { color: var(--brown); font-weight: 800; }
+    .pull-quote { background: var(--sand); border-radius: 16px; padding: 1.5rem 1.75rem; margin: 1.75rem 0; position: relative; }
+    .pull-quote::before { content: "\201C"; font-family: 'Fraunces', serif; font-size: 5rem; color: var(--peach); position: absolute; top: -1rem; left: 1rem; line-height: 1; }
+    .pull-quote p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-style: italic; color: var(--brown); line-height: 1.6; margin: 0; padding-top: 0.75rem; }
+    .pillars { display: flex; flex-direction: column; gap: 1rem; }
+    .pillar { background: var(--sand); border-radius: 18px; padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start; transition: transform 0.2s, box-shadow 0.2s; }
+    .pillar:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(59,35,20,0.08); }
+    .pillar-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; margin-top: 0.35rem; }
+    .pillar-title { font-size: 0.95rem; font-weight: 800; color: var(--brown); margin-bottom: 0.3rem; }
+    .pillar-text { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
+
+    .programs { background: var(--sage); padding: 6rem 4rem; position: relative; overflow: hidden; }
+    .programs::before { content: ""; position: absolute; top: -80px; right: -80px; width: 350px; height: 350px; border-radius: 50%; background: rgba(255,255,255,0.08); pointer-events: none; }
+    .programs-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+    .programs h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: white; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+    .programs-sub { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 3rem; }
+    .program-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+    .program-card { background: white; border-radius: 24px; padding: 2rem; transition: transform 0.25s, box-shadow 0.25s; }
+    .program-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(59,35,20,0.12); }
+    .prog-icon-wrap { width: 60px; height: 60px; border-radius: 18px; background: var(--sand); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 900; color: var(--clay); margin-bottom: 1.25rem; }
+    .prog-02 { background: #E8F4EC; color: var(--sage-dk); }
+    .prog-03 { background: #FBE8DC; color: var(--clay); }
+    .program-title { font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 900; color: var(--brown); margin-bottom: 0.75rem; }
+    .program-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+
+    .why { background: var(--warm-wh); padding: 6rem 4rem; }
+    .why-inner { max-width: 1000px; margin: 0 auto; }
+    .why h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .why-intro { font-size: 1.05rem; color: var(--muted); line-height: 1.8; max-width: 680px; margin-bottom: 3rem; }
+    .why-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-bottom: 3rem; }
+    .why-card { border-radius: 24px; padding: 2rem; text-align: center; }
+    .why-card:nth-child(1) { background: var(--sand); }
+    .why-card:nth-child(2) { background: #E8F4EC; }
+    .why-card:nth-child(3) { background: #FBE8DC; }
+    .why-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+    .why-num { font-family: 'Fraunces', serif; font-size: 3rem; font-weight: 900; color: var(--clay); margin-bottom: 0.75rem; line-height: 1; }
+    .why-card-text { font-size: 0.9rem; color: var(--brown); line-height: 1.6; font-weight: 600; }
+    .why-closing { background: var(--sand); border-radius: 20px; padding: 2rem 2.5rem; font-size: 1.05rem; color: var(--brown); line-height: 1.8; }
+    .why-closing strong { color: var(--clay); }
+
+    .involve { background: var(--sand); padding: 6rem 4rem; }
+    .involve-inner { max-width: 1100px; margin: 0 auto; }
+    .involve h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+    .involve-sub { color: var(--muted); font-size: 1rem; margin-bottom: 3rem; }
+    .involve-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.25rem; }
+    .involve-card { border-radius: 24px; padding: 2.25rem; transition: transform 0.25s, box-shadow 0.25s; }
+    .involve-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(59,35,20,0.1); }
+    .involve-card.c1 { background: var(--clay); }
+    .involve-card.c2 { background: white; }
+    .involve-card.c3 { background: var(--sage); }
+    .involve-card.c4 { background: #F0EBE5; }
+    .involve-icon { font-size: 2.25rem; margin-bottom: 1rem; }
+    .involve-title { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 900; margin-bottom: 0.75rem; }
+    .involve-card.c1 .involve-title, .involve-card.c3 .involve-title { color: white; }
+    .involve-card.c2 .involve-title, .involve-card.c4 .involve-title { color: var(--brown); }
+    .involve-desc { font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem; }
+    .involve-card.c1 .involve-desc, .involve-card.c3 .involve-desc { color: rgba(255,255,255,0.75); }
+    .involve-card.c2 .involve-desc, .involve-card.c4 .involve-desc { color: var(--muted); }
+    .involve-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 800; text-decoration: none; padding: 0.55rem 1.25rem; border-radius: 99px; transition: all 0.2s; }
+    .involve-card.c1 .involve-link { background: rgba(255,255,255,0.2); color: white; }
+    .involve-card.c1 .involve-link:hover { background: rgba(255,255,255,0.35); }
+    .involve-card.c2 .involve-link { background: var(--sand); color: var(--brown); }
+    .involve-card.c2 .involve-link:hover { background: var(--peach); }
+    .involve-card.c3 .involve-link { background: rgba(255,255,255,0.2); color: white; }
+    .involve-card.c3 .involve-link:hover { background: rgba(255,255,255,0.35); }
+    .involve-card.c4 .involve-link { background: var(--clay); color: white; }
+    .involve-card.c4 .involve-link:hover { background: #b0522e; }
+
+    footer { background: var(--brown); padding: 3rem 4rem; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
+    .footer-logo { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 900; color: var(--sand); }
+    .footer-logo span { color: var(--peach); }
+    .footer-tagline { font-size: 0.8rem; color: rgba(247,237,226,0.45); margin-top: 0.2rem; }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.82rem; font-weight: 700; color: rgba(247,237,226,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--peach); }
+    .footer-copy { font-size: 0.72rem; color: rgba(247,237,226,0.25); text-align: right; }
+
+    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 5rem 1.5rem 3rem; }
+      .hero-left { padding: 2rem 1.5rem; }
+      .hero-right { padding: 1rem 1.5rem 2rem; }
+      .stat-card:nth-child(2) { margin-left: 0; }
+      .mission { padding: 4rem 1.5rem; }
+      .mission-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .programs { padding: 4rem 1.5rem; }
+      .program-grid { grid-template-columns: 1fr; }
+      .why { padding: 4rem 1.5rem; }
+      .why-cards { grid-template-columns: 1fr; }
+      .involve { padding: 4rem 1.5rem; }
+      .involve-grid { grid-template-columns: 1fr; }
+      .callout { padding: 3.5rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-copy { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Youth Connect <span>CLE</span></div>
+  <ul class="nav-links">
+    <li><a href="#mission">Mission</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#why">Why It Matters</a></li>
+    <li><a href="#involve" class="nav-cta">Get Involved</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Cleveland, Ohio</div>
+    <h1>Teen Connection.<br><em>Real Community.</em><br>Right Here.</h1>
+    <p class="hero-sub">
+      Lonely has become common — but it doesn't have to be normal.
+      <strong>Youth Connect CLE</strong> brings Greater Cleveland teens together
+      through shared interests, community events, and spaces where every young person belongs.
+    </p>
+    <a href="#involve" class="btn btn-primary">Get Involved</a>
+    <a href="#mission" class="btn btn-soft">Our Mission</a>
+  </div>
+  <div class="hero-right">
+    <div class="stat-card">
+      <div class="stat-bubble">1 in 2</div>
+      <div>
+        <div style="font-family:'Fraunces',serif;font-weight:900;font-size:1.05rem;color:var(--brown);margin-bottom:0.2rem">Too Many Teens</div>
+        <div class="stat-text-label">report feeling lonely on a regular basis</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-bubble">↑42%</div>
+      <div>
+        <div style="font-family:'Fraunces',serif;font-weight:900;font-size:1.05rem;color:var(--brown);margin-bottom:0.2rem">Rising Numbers</div>
+        <div class="stat-text-label">rise in teen depression since 2012</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-bubble">100%</div>
+      <div>
+        <div style="font-family:'Fraunces',serif;font-weight:900;font-size:1.05rem;color:var(--brown);margin-bottom:0.2rem">Every Single Teen</div>
+        <div class="stat-text-label">deserves a place where they belong</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="callout">
+  <div class="callout-inner">
+    <div class="callout-label">The Connection Crisis</div>
+    <h2>What can you do alone that you can do together?</h2>
+    <div class="callout-answer">Almost Everything.</div>
+  </div>
+</section>
+
+<section class="mission" id="mission">
+  <div class="mission-inner">
+    <div class="mission-left fade-up">
+      <div class="section-tag">Who We Are</div>
+      <h2>Built for Belonging.</h2>
+      <p>Youth Connect CLE is a <strong>Cleveland-based nonprofit</strong> dedicated to strengthening teen social health and helping young people feel less alone.</p>
+      <p>We were created in response to a growing reality: many teenagers today feel isolated, disconnected, or unsure where they belong. Even in crowded schools and busy schedules, meaningful connections can be hard to find.</p>
+      <div class="pull-quote">
+        <p>You don't need to change who you are to find your people. You just need a place to connect.</p>
+      </div>
+      <p>Our work is inspired by the model of <strong>Pittsburgh Social Health</strong>, which centers social connection as a vital part of well-being. We believe social health deserves the same attention as physical and mental health — especially during adolescence.</p>
+    </div>
+    <div class="pillars fade-up">
+      <div class="pillar">
+        <div class="pillar-dot" style="background:var(--clay)"></div>
+        <div><div class="pillar-title">Social Health First</div><div class="pillar-text">Connection isn't extra — it's a protective factor. When teens feel seen, supported, and included, they're better equipped to thrive in every area of life.</div></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-dot" style="background:var(--sage)"></div>
+        <div><div class="pillar-title">Cleveland Proud</div><div class="pillar-text">We work across Greater Cleveland — connecting teens across schools, neighborhoods, and communities that rarely get the chance to meet.</div></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-dot" style="background:var(--peach)"></div>
+        <div><div class="pillar-title">Interest-Driven</div><div class="pillar-text">From gaming to sports to crafts — shared interests are shared ground. We use what teens already love as the on-ramp to community.</div></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-dot" style="background:var(--clay)"></div>
+        <div><div class="pillar-title">Research-Backed</div><div class="pillar-text">Strong social connections reduce anxiety and depression, increase engagement, and help teens navigate challenges with greater confidence.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="programs-inner">
+    <div class="section-tag fade-up" style="background:rgba(255,255,255,0.2);color:white;">What We Do</div>
+    <h2 class="fade-up">Our Programs</h2>
+    <p class="programs-sub fade-up">Teen-centered spaces designed for discovery, connection, and belonging.</p>
+    <div class="program-grid">
+      <div class="program-card fade-up">
+        <div class="prog-icon-wrap prog-01">01</div>
+        <div class="program-title">Club Fairs</div>
+        <div class="program-desc">We bring together youth organizations, school clubs, and interest groups from across Greater Cleveland — making it easy for teens to discover where they fit and connect with others who share their passions.</div>
+      </div>
+      <div class="program-card fade-up">
+        <div class="prog-icon-wrap prog-02">02</div>
+        <div class="program-title">Interest Events</div>
+        <div class="program-desc">From gaming nights to sports meetups, art workshops to movie screenings — we create recurring events built around what teens already love, so showing up feels natural.</div>
+      </div>
+      <div class="program-card fade-up">
+        <div class="prog-icon-wrap prog-03">03</div>
+        <div class="program-title">Drop-in Hangouts</div>
+        <div class="program-desc">No agenda, no pressure. Just open, welcoming spaces across Greater Cleveland where teens can hang out, meet new people, and simply feel like they belong.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="section-tag fade-up">Why It Matters</div>
+    <h2 class="fade-up">Connection is Protection.</h2>
+    <p class="why-intro fade-up">Research consistently shows that strong social connections act as a protective factor for teenagers. Connection doesn't fix everything — but it makes everything easier to face.</p>
+    <div class="why-cards fade-up">
+      <div class="why-card">
+        <div class="why-num">↓</div>
+        <div class="why-card-text">Reduced risk of anxiety and depression in socially connected teens</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">↑</div>
+        <div class="why-card-text">Increased academic and emotional engagement when teens feel included</div>
+      </div>
+      <div class="why-card">
+        <div class="why-num">+</div>
+        <div class="why-card-text">Greater resilience and confidence when navigating life's challenges</div>
+      </div>
+    </div>
+    <div class="why-closing fade-up">
+      At Youth Connect CLE, we believe every teen in Cleveland deserves access to community, friendship, and spaces where they feel welcomed exactly as they are. By strengthening social health, we aim to help Cleveland's teens feel more connected to each other, to their communities, and to themselves.
+      <br><br>
+      <strong>Connection doesn't fix everything. But it makes everything easier to face.</strong>
+    </div>
+  </div>
+</section>
+
+<section class="involve" id="involve">
+  <div class="involve-inner">
+    <div class="section-tag fade-up">Join Us</div>
+    <h2 class="fade-up">Get Involved</h2>
+    <p class="involve-sub fade-up">There's a place for everyone in this work — teens, parents, educators, and community partners.</p>
+    <div class="involve-grid">
+      <div class="involve-card c1 fade-up">
+        <div class="involve-title">Attend an Event</div>
+        <div class="involve-desc">Check out our upcoming club fairs, expos, and community gatherings. All events are free and open to teens across Greater Cleveland.</div>
+        <a href="#" class="involve-link">See Upcoming Events →</a>
+      </div>
+      <div class="involve-card c2 fade-up">
+        <div class="involve-title">Volunteer With Us</div>
+        <div class="involve-desc">Help us run events, set up spaces, and create welcoming environments for Cleveland teens. No experience needed — just a willingness to show up.</div>
+        <a href="#" class="involve-link">Become a Volunteer →</a>
+      </div>
+      <div class="involve-card c3 fade-up">
+        <div class="involve-title">Support Our Mission</div>
+        <div class="involve-desc">Your donation helps us host more events, reach more teens, and build a stronger, more connected Cleveland. Every contribution matters.</div>
+        <a href="#" class="involve-link">Donate Today →</a>
+      </div>
+      <div class="involve-card c4 fade-up">
+        <div class="involve-title">Partner With Us</div>
+        <div class="involve-desc">Are you a school, org, or community partner? Let's work together to expand our reach and bring more connection opportunities to Cleveland youth.</div>
+        <a href="#" class="involve-link">Reach Out →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Youth Connect <span>CLE</span></div>
+      <div class="footer-tagline">Teen Connection. Real Community. Right Here in Cleveland.</div>
+    </div>
+    <div class="footer-links">
+      <a href="#mission">Mission</a>
+      <a href="#programs">Programs</a>
+      <a href="#why">Why It Matters</a>
+      <a href="#involve">Get Involved</a>
+    </div>
+    <div class="footer-copy">© 2025 Youth Connect CLE<br>A Cleveland-based nonprofit</div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
