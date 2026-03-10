@@ -242,13 +242,14 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
     .form-check-group { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 0.4rem; }
-    .form-check { display: flex; align-items: center; gap: 0.6rem; cursor: pointer; }
+    .form-check { display: flex; align-items: center; gap: 0.6rem; cursor: pointer; user-select: none; }
     .form-check input[type="checkbox"] {
-      width: 18px; height: 18px; border-radius: 5px;
-      border: 2px solid var(--peach); background: white;
+      width: 18px; height: 18px;
       flex-shrink: 0; cursor: pointer;
       accent-color: var(--clay);
-      box-shadow: none; padding: 0;
+      appearance: auto;
+      -webkit-appearance: checkbox;
+      box-shadow: none; padding: 0; margin: 0;
     }
     .form-check span { font-size: 0.88rem; color: var(--brown); font-weight: 600; }
 
@@ -514,7 +515,7 @@
       </div>
 
       <div class="form-submit">
-        <button type="button" onclick="submitForm()">Send My Info →</button>
+        <button type="button" id="submitBtn">Send My Info →</button>
       </div>
     </div>
 
@@ -548,6 +549,11 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('submitBtn');
+    if (btn) btn.addEventListener('click', submitForm);
+  });
 
   function submitForm() {
     const firstName = document.getElementById('firstName').value.trim();
