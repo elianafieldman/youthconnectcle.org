@@ -211,66 +211,6 @@
       .footer-copy { text-align: left; }
     }
 
-    /* ── SIGNUP FORM ── */
-    .signup { background: var(--sand); padding: 6rem 4rem; }
-    .signup-inner { max-width: 700px; margin: 0 auto; }
-    .signup h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
-    .signup-sub { color: var(--muted); font-size: 1rem; margin-bottom: 2.5rem; }
-
-    .form-group { margin-bottom: 1.25rem; }
-    .form-group label { display: block; font-size: 0.85rem; font-weight: 800; color: var(--brown); margin-bottom: 0.4rem; }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%; padding: 0.85rem 1.1rem;
-      font-family: 'Nunito', sans-serif; font-size: 0.95rem;
-      color: var(--brown); background: white;
-      border: 2px solid transparent;
-      border-radius: 12px;
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      box-shadow: 0 2px 8px rgba(59,35,20,0.06);
-      appearance: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--clay);
-      box-shadow: 0 0 0 4px rgba(200,96,58,0.1);
-    }
-    .form-group textarea { resize: vertical; min-height: 80px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
-    .form-check-group { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 0.4rem; }
-    .form-check { display: flex; align-items: center; gap: 0.6rem; cursor: pointer; user-select: none; }
-    .form-check input[type="checkbox"] {
-      width: 18px; height: 18px;
-      flex-shrink: 0; cursor: pointer;
-      accent-color: var(--clay);
-      appearance: auto;
-      -webkit-appearance: checkbox;
-      box-shadow: none; padding: 0; margin: 0;
-    }
-    .form-check span { font-size: 0.88rem; color: var(--brown); font-weight: 600; }
-
-    .form-submit { margin-top: 2rem; }
-    .form-submit button {
-      background: var(--clay); color: white;
-      border: none; border-radius: 99px;
-      padding: 0.95rem 2.5rem;
-      font-family: 'Nunito', sans-serif; font-size: 0.95rem; font-weight: 800;
-      cursor: pointer; transition: all 0.2s;
-      box-shadow: 0 4px 16px rgba(200,96,58,0.25);
-    }
-    .form-submit button:hover { background: #b0522e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,96,58,0.35); }
-
-    .form-success {
-      display: none; text-align: center; padding: 3rem 2rem;
-      background: white; border-radius: 24px;
-    }
-    .form-success h3 { font-family: 'Fraunces', serif; font-size: 1.8rem; color: var(--brown); margin-bottom: 0.75rem; }
-    .form-success p { color: var(--muted); font-size: 1rem; line-height: 1.7; }
-
     @media (max-width: 768px) {
       .signup { padding: 4rem 1.5rem; }
       .form-row { grid-template-columns: 1fr; }
@@ -295,7 +235,7 @@
     <li><a href="#mission">Mission</a></li>
     <li><a href="#programs">Programs</a></li>
     <li><a href="#why">Why It Matters</a></li>
-    <li><a href="#signup" class="nav-cta">Sign Up</a></li>
+    <li><a href="#involve" class="nav-cta">Get Involved</a></li>
   </ul>
 </nav>
 
@@ -437,6 +377,7 @@
     <div class="section-tag fade-up">Join Us</div>
     <h2 class="fade-up">Get Involved</h2>
     <p class="involve-sub fade-up">There's a place for everyone in this work — teens, parents, educators, and community partners.</p>
+    <a href="https://forms.gle/uecyRdfNwXk3YEGr5" target="_blank" id="signupBtn" class="btn btn-primary fade-up" style="display:inline-block;margin-bottom:3rem;">Sign Up →</a>
     <div class="involve-grid">
       <div class="involve-card c1 fade-up">
         <div class="involve-title">Attend an Event</div>
@@ -446,85 +387,17 @@
       <div class="involve-card c2 fade-up">
         <div class="involve-title">Volunteer With Us</div>
         <div class="involve-desc">Help us run events, set up spaces, and create welcoming environments for Cleveland teens. No experience needed — just a willingness to show up.</div>
-        <div class="involve-coming">Sign-up form coming soon</div>
+        
       </div>
       <div class="involve-card c3 fade-up">
         <div class="involve-title">Get in Touch</div>
-        <div class="involve-desc">Whether you're a teen, parent, school, or community partner — we'd love to hear from you. Reach out to learn more, get involved, or bring Youth Connect CLE to your community.</div>
-        <a href="/cdn-cgi/l/email-protection#482d24212926290831273d3c202b2726262d2b3c2b242d66273a2f" class="involve-link"><span class="__cf_email__" data-cfemail="4d2821242c232c0d34223839252e222323282e392e212863223f2a">[email&#160;protected]</span> →</a>
+        <div class="involve-desc">Whether you're a teen, parent, school, or community partner — we'd love to connect. Fill out our sign-up form and we'll be in touch soon.</div>
+        
       </div>
     </div>
   </div>
 </section>
 
-<section class="signup" id="signup">
-  <div class="signup-inner">
-    <div class="section-tag fade-up">Stay Connected</div>
-    <h2 class="fade-up">Sign Up</h2>
-    <p class="signup-sub fade-up">Whether you're a teen, a volunteer, or a community partner — there's a place for you here. Fill out the form and we'll be in touch.</p>
-
-    <div id="signupForm" class="fade-up">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="firstName">First Name *</label>
-          <input type="text" id="firstName" placeholder="Your first name" required />
-        </div>
-        <div class="form-group">
-          <label for="lastName">Last Name *</label>
-          <input type="text" id="lastName" placeholder="Your last name" required />
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="email">Email Address *</label>
-        <input type="email" id="email" placeholder="you@example.com" required />
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="school">School or Organization</label>
-          <input type="text" id="school" placeholder="e.g. Lincoln High School" />
-        </div>
-        <div class="form-group">
-          <label for="grade">Age or Grade</label>
-          <input type="text" id="grade" placeholder="e.g. 16, or 10th grade" />
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label>I am a... *</label>
-        <div class="form-check-group">
-          <label class="form-check"><input type="checkbox" name="role" value="teen" /><span>Teen looking to attend events</span></label>
-          <label class="form-check"><input type="checkbox" name="role" value="volunteer" /><span>Volunteer</span></label>
-          <label class="form-check"><input type="checkbox" name="role" value="partner" /><span>School or community partner</span></label>
-          <label class="form-check"><input type="checkbox" name="role" value="general" /><span>General interest / stay updated</span></label>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="howHeard">How did you hear about us?</label>
-        <select id="howHeard">
-          <option value="" disabled selected>Select one</option>
-          <option>Social media</option>
-          <option>Friend or family</option>
-          <option>School or teacher</option>
-          <option>Community event</option>
-          <option>Google search</option>
-          <option>Other</option>
-        </select>
-      </div>
-
-      <div class="form-submit">
-        <button type="button" id="submitBtn">Send My Info →</button>
-      </div>
-    </div>
-
-    <div class="form-success" id="formSuccess">
-      <h3>You're in! 🌱</h3>
-      <p>Thanks for reaching out. We'll be in touch soon at the email you provided.<br>In the meantime, feel free to reach us directly at <a href="/cdn-cgi/l/email-protection#bdd8d1d4dcd3dcfdc4d2c8c9d5ded2d3d3d8dec9ded1d893d2cfda" style="color:var(--clay);font-weight:800"><span class="__cf_email__" data-cfemail="dcb9b0b5bdb2bd9ca5b3a9a8b4bfb3b2b2b9bfa8bfb0b9f2b3aebb">[email&#160;protected]</span></a>.</p>
-    </div>
-  </div>
-</section>
 
 
 <footer>
@@ -538,7 +411,6 @@
       <a href="#programs">Programs</a>
       <a href="#why">Why It Matters</a>
       <a href="#involve">Get Involved</a>
-      <a href="#signup">Sign Up</a>
     </div>
     <div class="footer-copy">© 2026 Youth Connect CLE<br>A Cleveland-based nonprofit</div>
   </div>
@@ -550,50 +422,7 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var btn = document.getElementById('submitBtn');
-    if (btn) btn.addEventListener('click', submitForm);
-  });
 
-  function submitForm() {
-    const firstName = document.getElementById('firstName').value.trim();
-    const lastName = document.getElementById('lastName').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const roles = [...document.querySelectorAll('input[name="role"]:checked')].map(el => el.value);
-
-    if (!firstName || !lastName || !email) {
-      alert('Please fill in your name and email to continue.');
-      return;
-    }
-    if (!email.includes('@')) {
-      alert('Please enter a valid email address.');
-      return;
-    }
-    if (roles.length === 0) {
-      alert('Please select at least one option for "I am a..."');
-      return;
-    }
-
-    const school = document.getElementById('school').value.trim();
-    const grade = document.getElementById('grade').value.trim();
-    const howHeard = document.getElementById('howHeard').value;
-
-    const subject = encodeURIComponent('New Sign-Up: ' + firstName + ' ' + lastName);
-    const body = encodeURIComponent(
-      'New sign-up from youthconnectcle.org\n\n' +
-      'Name: ' + firstName + ' ' + lastName + '\n' +
-      'Email: ' + email + '\n' +
-      'School/Org: ' + (school || 'Not provided') + '\n' +
-      'Age/Grade: ' + (grade || 'Not provided') + '\n' +
-      'I am a: ' + roles.join(', ') + '\n' +
-      'How they heard: ' + (howHeard || 'Not provided')
-    );
-
-    window.location.href = 'mailto:eliana@youthconnectcle.org?subject=' + subject + '&body=' + body;
-
-    document.getElementById('signupForm').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
-  }
 </script>
 </body>
 </html>
