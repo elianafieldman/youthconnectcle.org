@@ -151,27 +151,30 @@
     .involve-inner { max-width: 1100px; margin: 0 auto; }
     .involve h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
     .involve-sub { color: var(--muted); font-size: 1rem; margin-bottom: 3rem; }
-    .involve-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+    .involve-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.25rem; }
     .involve-card { border-radius: 24px; padding: 2.25rem; transition: transform 0.25s, box-shadow 0.25s; }
     .involve-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(59,35,20,0.1); }
-    .involve-card.c1 { background: var(--clay); }
-    .involve-card.c2 { background: white; }
+    .involve-card.c1 { background: white; }
+    .involve-card.c2 { background: var(--sage); }
     .involve-card.c3 { background: var(--sage); }
     .involve-card.c4 { background: #F0EBE5; }
     .involve-icon { font-size: 2.25rem; margin-bottom: 1rem; }
     .involve-title { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 900; margin-bottom: 0.75rem; }
-    .involve-card.c1 .involve-title, .involve-card.c3 .involve-title { color: white; }
-    .involve-card.c2 .involve-title, .involve-card.c4 .involve-title { color: var(--brown); }
+    .involve-card.c1 .involve-title { color: var(--brown); }
+    .involve-card.c3 .involve-title { color: white; }
+    .involve-card.c2 .involve-title { color: white; }
+    .involve-card.c4 .involve-title { color: var(--brown); }
     .involve-desc { font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem; }
-    .involve-card.c1 .involve-desc, .involve-card.c3 .involve-desc { color: rgba(255,255,255,0.75); }
-    .involve-card.c2 .involve-desc, .involve-card.c4 .involve-desc { color: var(--muted); }
-    .involve-coming { font-size: 0.78rem; font-weight: 700; color: rgba(255,255,255,0.45); font-style: italic; }
-    .involve-card.c2 .involve-coming { color: var(--muted); }
-    .involve-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 800; text-decoration: none; padding: 0.55rem 1.25rem; border-radius: 99px; transition: all 0.2s; }
-    .involve-card.c1 .involve-link { background: rgba(255,255,255,0.2); color: white; }
-    .involve-card.c1 .involve-link:hover { background: rgba(255,255,255,0.35); }
-    .involve-card.c2 .involve-link { background: var(--sand); color: var(--brown); }
-    .involve-card.c2 .involve-link:hover { background: var(--peach); }
+    .involve-card.c1 .involve-desc { color: var(--brown); opacity: 0.75; }
+    .involve-card.c3 .involve-desc { color: rgba(255,255,255,0.75); }
+    .involve-card.c2 .involve-desc { color: rgba(255,255,255,0.8); }
+    .involve-card.c4 .involve-desc { color: var(--muted); }
+    .involve-coming { font-size: 0.78rem; font-weight: 700; color: var(--muted); font-style: italic; }
+    .involve-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 1rem; font-weight: 800; text-decoration: none; padding: 0.85rem 2rem; border-radius: 99px; transition: all 0.2s; }
+    .involve-card.c1 .involve-link { background: var(--clay); color: white; }
+    .involve-card.c1 .involve-link:hover { background: #b0522e; }
+    .involve-card.c2 .involve-link { background: rgba(255,255,255,0.2); color: white; }
+    .involve-card.c2 .involve-link:hover { background: rgba(255,255,255,0.35); }
     .involve-card.c3 .involve-link { background: rgba(255,255,255,0.2); color: white; }
     .involve-card.c3 .involve-link:hover { background: rgba(255,255,255,0.35); }
     .involve-card.c4 .involve-link { background: var(--clay); color: white; }
@@ -224,6 +227,12 @@
     .why-big-label { font-family: 'Nunito', sans-serif; font-size: 0.9rem; font-weight: 700; color: var(--brown); line-height: 1.5; margin-bottom: 0.5rem; }
     .why-big-source { font-family: 'Nunito', sans-serif; font-size: 0.68rem; color: var(--muted); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
     @media (max-width: 768px) { .why-stats { grid-template-columns: 1fr; } }
+
+    .signup-box { background: var(--clay); border-radius: 24px; padding: 2.5rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .signup-box-title { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 900; color: white; margin-bottom: 0.4rem; }
+    .signup-box-sub { font-size: 0.9rem; color: rgba(247,237,226,0.6); line-height: 1.6; max-width: 480px; }
+    .signup-box .btn-primary { flex-shrink: 0; background: var(--sage); color: white; font-size: 1rem; padding: 0.9rem 2rem; }
+    .signup-box .btn-primary:hover { background: var(--sage-dk); color: white; }
   </style>
 </head>
 <body>
@@ -376,6 +385,14 @@
     <div class="section-tag fade-up">Join Us</div>
     <h2 class="fade-up">Get Involved</h2>
     <p class="involve-sub fade-up">There's a place for everyone in this work — teens, parents, educators, and community partners.</p>
+    <div class="signup-box fade-up">
+      <div class="signup-box-text">
+        <div class="signup-box-title">Ready to Connect?</div>
+        <div class="signup-box-sub">Sign up to stay updated on events, volunteer opportunities, and everything Youth Connect CLE.</div>
+      </div>
+      <a href="https://forms.gle/uecyRdfNwXk3YEGr5" target="_blank" class="btn btn-primary">Sign Up →</a>
+    </div>
+
     <div class="involve-grid">
       <div class="involve-card c1 fade-up">
         <div class="involve-title">Attend an Event</div>
@@ -385,12 +402,6 @@
       <div class="involve-card c2 fade-up">
         <div class="involve-title">Volunteer With Us</div>
         <div class="involve-desc">Help us run events, set up spaces, and create welcoming environments for Cleveland teens. No experience needed — just a willingness to show up.</div>
-        <a href="https://forms.gle/uecyRdfNwXk3YEGr5" target="_blank" class="involve-link">Sign Up →</a>
-      </div>
-      <div class="involve-card c3 fade-up">
-        <div class="involve-title">Get in Touch</div>
-        <div class="involve-desc">Whether you're a teen, parent, school, or community partner — we'd love to connect. Fill out our sign-up form and we'll be in touch soon.</div>
-        <a href="https://forms.gle/uecyRdfNwXk3YEGr5" target="_blank" class="involve-link">Sign Up →</a>
       </div>
     </div>
   </div>
