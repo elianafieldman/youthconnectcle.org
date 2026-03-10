@@ -212,7 +212,6 @@
     }
 
     @media (max-width: 768px) {
-      .signup { padding: 4rem 1.5rem; }
       .form-row { grid-template-columns: 1fr; }
       .form-check-group { grid-template-columns: 1fr; }
     }
@@ -377,7 +376,6 @@
     <div class="section-tag fade-up">Join Us</div>
     <h2 class="fade-up">Get Involved</h2>
     <p class="involve-sub fade-up">There's a place for everyone in this work — teens, parents, educators, and community partners.</p>
-    <a href="https://forms.gle/uecyRdfNwXk3YEGr5" target="_blank" id="signupBtn" class="btn btn-primary fade-up" style="display:inline-block;margin-bottom:3rem;">Sign Up →</a>
     <div class="involve-grid">
       <div class="involve-card c1 fade-up">
         <div class="involve-title">Attend an Event</div>
@@ -387,12 +385,12 @@
       <div class="involve-card c2 fade-up">
         <div class="involve-title">Volunteer With Us</div>
         <div class="involve-desc">Help us run events, set up spaces, and create welcoming environments for Cleveland teens. No experience needed — just a willingness to show up.</div>
-        
+        <a href="https://forms.gle/uecyRdfNwXk3YEGr5" target="_blank" class="involve-link">Sign Up →</a>
       </div>
       <div class="involve-card c3 fade-up">
         <div class="involve-title">Get in Touch</div>
         <div class="involve-desc">Whether you're a teen, parent, school, or community partner — we'd love to connect. Fill out our sign-up form and we'll be in touch soon.</div>
-        
+        <a href="https://forms.gle/uecyRdfNwXk3YEGr5" target="_blank" class="involve-link">Sign Up →</a>
       </div>
     </div>
   </div>
@@ -416,7 +414,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
