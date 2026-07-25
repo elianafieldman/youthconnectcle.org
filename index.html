@@ -1,15 +1,3 @@
-<!-- ============================================================
-     YOUTH CONNECT CLE — WEBSITE CODE
-     File: youthconnectcle.html
-     Last updated: May 2026
-
-     HOW TO USE:
-     1. Save as index.html and upload to your host, OR paste into your site editor
-     2. Replace EVENTBRITE_LINK_HERE with your Eventbrite URL when ready
-     3. Replace PARTIFUL_LINK_HERE with your Partiful URL when ready
-     Formspree is already wired in. Form works on any live domain (not local preview).
-============================================================ -->
-<!-- ==================== START OF WEBSITE CODE ==================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,246 +8,214 @@
   <meta name="author" content="Youth Connect CLE"/>
   <meta name="robots" content="index, follow"/>
   <meta property="og:title" content="Youth Connect CLE"/>
-  <meta property="og:description" content="Teen connection. Real community. Right here in Cleveland."/>
+  <meta property="og:description" content="Teen connection. Real community."/>
   <meta property="og:url" content="https://youthconnectcle.org"/>
   <meta property="og:type" content="website"/>
   <link rel="canonical" href="https://youthconnectcle.org"/>
-  <link rel="icon" type="image/png" href="data:image/png;base64,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"/>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Fraunces:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet"/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
   <style>
     :root {
-      --clay:    #C8603A;
-      --peach:   #F5A97F;
-      --sand:    #F7EDE2;
-      --sage:    #7EAE8E;
-      --sage-dk: #4A7A5C;
-      --brown:   #3B2314;
-      --warm-wh: #FDFAF6;
-      --muted:   #8C6E5A;
+      /* Brand Guide Palette */
+      --cream:     #FDFBF6;
+      --sky-blue:  #BFE1EC;
+      --deep-sky:  #5FA0B8;
+      --butter:    #F7DE8F;
+      --blush:     #F2A9A0;
+      --ink:       #2B3A45;
+      
+      /* Subtle muted variations */
+      --ink-muted: rgba(43, 58, 69, 0.65);
+      --ink-faint: rgba(43, 58, 69, 0.15);
     }
+    
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Nunito', sans-serif; background: var(--warm-wh); color: var(--brown); overflow-x: hidden; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+    /* TOP BANNER */
+    .top-banner { background: var(--deep-sky); color: white; text-align: center; padding: 0.65rem 1rem; font-size: 0.9rem; font-weight: 700; position: fixed; top: 0; left: 0; right: 0; z-index: 105; box-shadow: 0 2px 10px rgba(43,58,69,0.1); }
+    .top-banner a { color: white; text-decoration: none; }
+    .top-banner a:hover { text-decoration: underline; }
 
     /* POPUP */
-    .popup-overlay { display: none; position: fixed; inset: 0; background: rgba(59,35,20,0.45); z-index: 999; align-items: center; justify-content: center; padding: 1.5rem; }
+    .popup-overlay { display: none; position: fixed; inset: 0; background: rgba(43,58,69,0.6); z-index: 999; align-items: center; justify-content: center; padding: 1.5rem; }
     .popup-overlay.active { display: flex; }
-    .popup { background: var(--warm-wh); border-radius: 28px; padding: 2.75rem; max-width: 480px; width: 100%; position: relative; box-shadow: 0 24px 80px rgba(59,35,20,0.2); animation: popIn 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards; }
+    .popup { background: var(--cream); border-radius: 28px; padding: 2.75rem; max-width: 480px; width: 100%; position: relative; box-shadow: 0 24px 80px rgba(43,58,69,0.25); animation: popIn 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards; }
     @keyframes popIn { from { opacity: 0; transform: scale(0.88) translateY(20px); } to { opacity: 1; transform: scale(1) translateY(0); } }
-    .popup-close { position: absolute; top: 1.25rem; right: 1.25rem; background: var(--sand); border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 1rem; color: var(--muted); display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
-    .popup-close:hover { background: var(--peach); color: white; }
-    .popup-eyebrow { display: inline-block; background: var(--sage); color: white; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; margin-bottom: 1rem; }
-    .popup h3 { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 900; color: var(--brown); line-height: 1.1; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
-    .popup-sub { font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.5rem; }
+    .popup-close { position: absolute; top: 1.25rem; right: 1.25rem; background: var(--sky-blue); border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; font-size: 1rem; color: var(--ink); display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+    .popup-close:hover { background: var(--blush); color: var(--ink); }
+    .popup-eyebrow { display: inline-block; background: var(--butter); color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; margin-bottom: 1rem; }
+    .popup h3 { font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; color: var(--ink); line-height: 1.1; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+    .popup-sub { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.6; margin-bottom: 1.5rem; }
     .popup-form { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-    .popup-form input { flex: 1; min-width: 180px; padding: 0.85rem 1rem; border: 1.5px solid var(--sand); border-radius: 12px; font-family: 'Nunito', sans-serif; font-size: 0.9rem; color: var(--brown); background: white; outline: none; transition: border-color 0.2s; }
-    .popup-form input:focus { border-color: var(--clay); }
-    .popup-form button { padding: 0.85rem 1.5rem; background: var(--clay); color: white; font-family: 'Nunito', sans-serif; font-size: 0.9rem; font-weight: 800; border: none; border-radius: 99px; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
-    .popup-form button:hover { background: #b0522e; transform: translateY(-1px); }
+    .popup-form input { flex: 1; min-width: 180px; padding: 0.85rem 1rem; border: 1.5px solid var(--ink-faint); border-radius: 12px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ink); background: white; outline: none; transition: border-color 0.2s; }
+    .popup-form input:focus { border-color: var(--deep-sky); }
+    .popup-form button { padding: 0.85rem 1.5rem; background: var(--deep-sky); color: white; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 700; border: none; border-radius: 99px; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+    .popup-form button:hover { background: #4a8499; transform: translateY(-1px); }
     .popup-success { display: none; text-align: center; padding: 1rem 0; }
-    .popup-success-title { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 900; color: var(--brown); margin-bottom: 0.4rem; }
-    .popup-success-text { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
-    .popup-note { font-size: 0.72rem; color: var(--muted); opacity: 0.6; margin-top: 0.85rem; text-align: center; }
+    .popup-success-title { font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--ink); margin-bottom: 0.4rem; }
+    .popup-success-text { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.6; }
 
     /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2.5rem; background: var(--warm-wh); border-bottom: 2px solid var(--sand); box-shadow: 0 2px 20px rgba(59,35,20,0.06); }
-    .nav-logo { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 900; color: var(--brown); letter-spacing: -0.02em; }
-    .nav-logo span { color: var(--clay); }
+    nav { position: fixed; top: 38px; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2.5rem; background: var(--cream); border-bottom: 2px solid var(--ink-faint); box-shadow: 0 2px 20px rgba(43,58,69,0.04); transition: top 0.3s; }
+    .nav-logo { font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--ink); letter-spacing: -0.02em; text-decoration: none; }
+    .nav-logo span { color: var(--deep-sky); }
     .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.88rem; font-weight: 700; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--clay); }
-    .nav-cta { background: var(--clay); color: white !important; padding: 0.5rem 1.2rem; border-radius: 99px; }
-    .nav-cta:hover { background: #b0522e !important; }
+    .nav-links a { color: var(--ink-muted); text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--deep-sky); }
+    .nav-cta { background: var(--deep-sky); color: white !important; padding: 0.5rem 1.2rem; border-radius: 99px; }
+    .nav-cta:hover { background: #4a8499 !important; }
 
     /* HERO */
-    .hero { min-height: 100vh; background: var(--sand); display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; padding-top: 72px; position: relative; overflow: hidden; }
-    .hero::before { content: ""; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(200,96,58,0.10) 0%, transparent 70%); top: -100px; right: -100px; pointer-events: none; }
-    .hero::after { content: ""; position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(126,174,142,0.13) 0%, transparent 70%); bottom: -80px; left: 10%; pointer-events: none; }
+    .hero { min-height: 100vh; background: var(--cream); display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; padding-top: 110px; position: relative; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(191,225,236,0.5) 0%, transparent 70%); top: -100px; right: -100px; pointer-events: none; }
+    .hero::after { content: ""; position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(242,169,160,0.3) 0%, transparent 70%); bottom: -80px; left: 10%; pointer-events: none; }
     .hero-left { padding: 4rem 3rem 4rem 5rem; position: relative; z-index: 2; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--sage); color: white; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 99px; margin-bottom: 1.5rem; }
-    .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2.8rem, 5vw, 5rem); color: var(--brown); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
-    .hero h1 em { font-style: italic; color: var(--clay); }
-    .hero-sub { font-size: 1.05rem; color: var(--muted); line-height: 1.75; max-width: 440px; margin-bottom: 2.5rem; }
-    .hero-sub strong { color: var(--brown); font-weight: 800; }
-    .btn { display: inline-block; padding: 0.85rem 2rem; font-family: 'Nunito', sans-serif; font-size: 0.9rem; font-weight: 800; text-decoration: none; cursor: pointer; transition: all 0.2s; border: none; border-radius: 99px; }
-    .btn-primary { background: var(--clay); color: white; }
-    .btn-primary:hover { background: #b0522e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,96,58,0.3); }
-    .btn-soft { background: white; color: var(--brown); margin-left: 0.75rem; box-shadow: 0 2px 12px rgba(59,35,20,0.1); }
-    .btn-soft:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(59,35,20,0.15); }
+    .hero h1 { font-family: 'Outfit', sans-serif; font-size: clamp(2.8rem, 5vw, 5rem); color: var(--ink); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+    .hero h1 em { font-style: italic; color: var(--deep-sky); }
+    .hero-sub { font-size: 1.1rem; color: var(--ink-muted); line-height: 1.75; max-width: 440px; margin-bottom: 2.5rem; }
+    .btn { display: inline-block; padding: 0.85rem 2rem; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 700; text-decoration: none; cursor: pointer; transition: all 0.2s; border: none; border-radius: 99px; }
+    .btn-primary { background: var(--deep-sky); color: white; }
+    .btn-primary:hover { background: #4a8499; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(95,160,184,0.3); }
+    .btn-soft { background: white; color: var(--ink); margin-left: 0.75rem; box-shadow: 0 2px 12px rgba(43,58,69,0.06); border: 1px solid var(--ink-faint); }
+    .btn-soft:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(43,58,69,0.1); }
+    
     .hero-right { position: relative; z-index: 2; padding: 4rem 4rem 4rem 2rem; display: flex; flex-direction: column; gap: 1rem; }
-    .stat-card { background: white; border-radius: 20px; padding: 1.5rem 1.75rem; box-shadow: 0 4px 20px rgba(59,35,20,0.08); display: flex; align-items: flex-start; gap: 1.25rem; transition: transform 0.2s; }
+    .stat-card { background: white; border-radius: 20px; padding: 1.5rem 1.75rem; box-shadow: 0 4px 20px rgba(43,58,69,0.05); display: flex; align-items: center; gap: 1.25rem; transition: transform 0.2s; border: 1px solid var(--ink-faint); }
     .stat-card:hover { transform: translateY(-3px); }
-    .stat-card:nth-child(2) { margin-left: 1.5rem; }
-    .stat-bubble { width: 56px; height: 56px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 900; color: white; text-align: center; line-height: 1.2; }
-    .stat-card:nth-child(1) .stat-bubble { background: var(--clay); }
-    .stat-card:nth-child(2) .stat-bubble { background: var(--sage); }
-    .stat-card:nth-child(3) .stat-bubble { background: var(--brown); font-size: 0.78rem; }
-    .stat-text-label { font-size: 0.8rem; color: var(--muted); line-height: 1.4; margin-top: 0.15rem; }
-    .stat-source { font-size: 0.63rem; color: var(--muted); opacity: 0.55; font-weight: 700; margin-top: 0.35rem; font-style: italic; }
+    .stat-bubble { border-radius: 12px; padding: 0.6rem 1rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--ink); text-align: center; line-height: 1.2; white-space: nowrap; }
+    .stat-card:nth-child(1) .stat-bubble { background: var(--sky-blue); }
+    .stat-card:nth-child(2) .stat-bubble { background: var(--butter); }
+    .stat-card:nth-child(3) .stat-bubble { background: var(--blush); }
+    .stat-text-label { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.4; font-weight: 500; }
 
-    /* CALLOUT */
-    .callout { background: var(--clay); padding: 5rem 4rem; position: relative; overflow: hidden; }
-    .callout-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
-    .callout-label { display: inline-block; background: rgba(255,255,255,0.2); color: white; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 99px; margin-bottom: 1.75rem; }
-    .callout-headline { font-family: 'Fraunces', serif; font-size: clamp(2.5rem, 6vw, 5.5rem); color: white; font-weight: 900; line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 2.5rem; }
-    .callout-headline em { color: rgba(255,255,255,0.55); font-style: italic; }
-    .callout-body { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
-    .callout-fact { background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.25rem 1.5rem; }
-    .callout-fact-label { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.5rem; }
-    .callout-fact-text { font-size: 0.92rem; color: white; line-height: 1.6; font-weight: 600; }
-
-    /* STORY */
-    .story { padding: 7rem 4rem; background: var(--warm-wh); }
-    .story-inner { max-width: 760px; margin: 0 auto; }
-    .story-eyebrow { display: inline-block; background: var(--sand); color: var(--clay); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.5rem; }
-    .story h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.75rem; }
-    .story p { font-size: 1rem; line-height: 1.9; color: var(--muted); margin-bottom: 1.4rem; }
-    .story p strong { color: var(--brown); font-weight: 800; }
-    .story-pull { border-left: 4px solid var(--clay); padding: 0.25rem 0 0.25rem 1.75rem; margin: 2rem 0; }
-    .story-pull p { font-family: 'Fraunces', serif; font-size: 1.3rem; font-style: italic; color: var(--brown); line-height: 1.5; margin: 0; }
+    /* STORY (Combined with About) */
+    .story { padding: 7rem 4rem; background: var(--cream); }
+    .story-inner { max-width: 800px; margin: 0 auto; }
+    .story-eyebrow { display: inline-block; background: var(--sky-blue); color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.5rem; }
+    .story h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; color: var(--ink); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.75rem; }
+    .story p { font-size: 1.05rem; line-height: 1.9; color: var(--ink-muted); margin-bottom: 1.4rem; }
+    .story p strong { color: var(--ink); font-weight: 700; }
+    .story-link { color: var(--deep-sky); font-weight: 700; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
+    .story-link:hover { border-color: var(--deep-sky); }
+    .matchmaker-text { font-family: 'Outfit', sans-serif; font-size: 2.2rem; color: var(--deep-sky); margin: 4rem 0 3rem; text-align: center; font-weight: 800; line-height: 1.2; }
 
     /* RESEARCH */
-    .research { background: var(--sand); padding: 6rem 4rem; }
-    .research-inner { max-width: 960px; margin: 0 auto; }
-    .section-tag { display: inline-block; background: var(--sand); color: var(--clay); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.25rem; }
-    .research h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
-    .research-sub { font-size: 1rem; color: var(--muted); line-height: 1.7; max-width: 580px; margin-bottom: 3rem; }
-    .research-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.25rem; }
-    .resource-card { background: white; border-radius: 24px; padding: 2rem; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; display: block; }
-    .resource-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(59,35,20,0.1); }
-    .resource-pill { display: inline-block; background: var(--clay); color: white; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; margin-bottom: 1rem; }
-    .resource-title { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 900; color: var(--brown); margin-bottom: 0.6rem; line-height: 1.25; }
-    .resource-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.25rem; }
-    .resource-cta { font-size: 0.85rem; font-weight: 800; color: var(--clay); }
+    .research { background: var(--sky-blue); padding: 6rem 4rem; }
+    .research-inner { max-width: 1000px; margin: 0 auto; }
+    .section-tag { display: inline-block; background: white; color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.25rem; }
+    .research h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; color: var(--ink); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .research-sub { font-size: 1.05rem; color: var(--ink-muted); line-height: 1.7; max-width: 680px; margin-bottom: 3rem; }
+    .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; max-width: 1000px; margin: 0 auto; }
+    .resource-card { background: white; border-radius: 24px; padding: 2rem; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; display: flex; flex-direction: column; border: 1px solid rgba(255,255,255,0.5); }
+    .resource-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(43,58,69,0.1); }
+    .resource-pill { align-self: flex-start; display: inline-block; background: var(--butter); color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 99px; margin-bottom: 1rem; }
+    .resource-title { font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 800; color: var(--ink); margin-bottom: 0.6rem; line-height: 1.3; }
+    .resource-desc { font-size: 0.9rem; color: var(--ink-muted); line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1; }
+    .resource-cta { font-size: 0.95rem; font-weight: 700; color: var(--deep-sky); }
 
     /* MISSION */
-    .mission { padding: 6rem 4rem; background: var(--warm-wh); }
-    .mission-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-    .mission h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
-    .mission p { font-size: 1rem; line-height: 1.8; color: var(--muted); margin-bottom: 1.25rem; }
-    .mission p strong { color: var(--brown); font-weight: 800; }
-    .pull-quote { background: var(--sand); border-radius: 16px; padding: 1.5rem 1.75rem; margin: 1.75rem 0; position: relative; }
-    .pull-quote::before { content: "\201C"; font-family: 'Fraunces', serif; font-size: 5rem; color: var(--peach); position: absolute; top: -1rem; left: 1rem; line-height: 1; }
-    .pull-quote p { font-family: 'Fraunces', serif; font-size: 1.15rem; font-style: italic; color: var(--brown); line-height: 1.6; margin: 0; padding-top: 0.75rem; }
-    .pillars { display: flex; flex-direction: column; gap: 1rem; }
-    .pillar { background: var(--sand); border-radius: 18px; padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start; transition: transform 0.2s, box-shadow 0.2s; }
-    .pillar:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(59,35,20,0.08); }
-    .pillar-dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; margin-top: 0.35rem; }
-    .pillar-title { font-size: 0.95rem; font-weight: 800; color: var(--brown); margin-bottom: 0.3rem; }
-    .pillar-text { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
-
-    /* WHY */
-    .why { background: var(--sand); padding: 6rem 4rem; }
-    .why-inner { max-width: 1000px; margin: 0 auto; }
-    .why h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1rem; }
-    .why-intro { font-size: 1.05rem; color: var(--muted); line-height: 1.8; max-width: 680px; margin-bottom: 3rem; }
-    .why-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; margin-bottom: 2rem; }
-    .why-stat-box { background: white; border-radius: 24px; padding: 2rem 1.75rem; text-align: center; }
-    .why-big-num { font-family: 'Fraunces', serif; font-size: clamp(2.5rem, 4vw, 4rem); font-weight: 900; color: var(--clay); line-height: 1; margin-bottom: 0.6rem; letter-spacing: -0.02em; }
-    .why-stat-box:nth-child(2) .why-big-num { color: var(--sage-dk); }
-    .why-stat-box:nth-child(3) .why-big-num { color: var(--brown); font-size: clamp(1.6rem,2.5vw,2.4rem); }
-    .why-big-label { font-size: 0.9rem; font-weight: 700; color: var(--brown); line-height: 1.5; margin-bottom: 0.5rem; }
-    .why-big-source { font-size: 0.65rem; color: var(--muted); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-style: italic; }
-    .why-closing { background: white; border-radius: 20px; padding: 2rem 2.5rem; font-size: 1.05rem; color: var(--brown); line-height: 1.8; }
-    .why-closing strong { color: var(--clay); }
+    .mission { padding: 6rem 4rem; background: var(--cream); }
+    .mission-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 5rem; align-items: center; }
+    .mission h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 800; color: var(--ink); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+    .mission p { font-size: 1.05rem; line-height: 1.8; color: var(--ink-muted); margin-bottom: 1.25rem; }
+    .pillars { display: flex; flex-direction: column; gap: 1.5rem; }
+    .pillar { border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; align-items: flex-start; transition: transform 0.2s, box-shadow 0.2s; }
+    .pillar:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(43,58,69,0.08); }
+    .pillar:nth-child(1) { background: var(--sky-blue); }
+    .pillar:nth-child(2) { background: var(--butter); }
+    .pillar:nth-child(3) { background: var(--blush); }
+    .pillar-title { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; line-height: 1.2; }
+    .pillar-text { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.6; }
 
     /* EVENT */
-    .event { background: var(--brown); padding: 7rem 4rem; position: relative; overflow: hidden; }
-    .event::before { content: ""; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: rgba(200,96,58,0.07); top: -150px; right: -150px; pointer-events: none; }
+    .event { background: var(--ink); padding: 7rem 4rem; position: relative; overflow: hidden; }
+    .event::before { content: ""; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(95,160,184,0.15) 0%, transparent 70%); top: -150px; right: -150px; pointer-events: none; }
     .event-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
-    .event-tag { display: inline-block; background: rgba(200,96,58,0.25); color: var(--peach); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.5rem; }
-    .event h2 { font-family: 'Fraunces', serif; font-size: clamp(2.5rem, 5vw, 4.5rem); color: var(--sand); line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
-    .event h2 em { color: var(--peach); font-style: italic; }
-    .event-sub { font-size: 1rem; color: rgba(247,237,226,0.6); line-height: 1.75; max-width: 560px; margin-bottom: 3rem; }
+    .event-tag { display: inline-block; background: rgba(95,160,184,0.25); color: var(--butter); font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.5rem; }
+    .event h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; color: var(--cream); line-height: 1.0; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .event h2 em { color: var(--butter); font-style: italic; }
+    .event-sub { font-size: 1.1rem; color: rgba(253,251,246,0.7); line-height: 1.75; max-width: 560px; margin-bottom: 3rem; }
     .event-details { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-bottom: 2rem; }
-    .event-detail { background: rgba(255,255,255,0.06); border: 1px solid rgba(247,237,226,0.1); border-radius: 16px; padding: 1.5rem 1.25rem; }
-    .event-detail-label { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--peach); margin-bottom: 0.5rem; }
-    .event-detail-value { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 900; color: var(--sand); line-height: 1.25; }
-    .event-detail-note { font-size: 0.72rem; color: rgba(247,237,226,0.35); margin-top: 0.3rem; }
-    .event-notice { background: rgba(245,169,127,0.1); border: 1px solid rgba(245,169,127,0.2); border-radius: 12px; padding: 0.85rem 1.25rem; margin-bottom: 2rem; font-size: 0.83rem; color: rgba(247,237,226,0.55); line-height: 1.6; }
-    .event-notice strong { color: var(--peach); }
+    .event-detail { background: rgba(255,255,255,0.05); border: 1px solid rgba(253,251,246,0.1); border-radius: 16px; padding: 1.5rem 1.25rem; }
+    .event-detail-label { font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sky-blue); margin-bottom: 0.5rem; }
+    .event-detail-value { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--cream); line-height: 1.25; }
+    .event-detail-note { font-size: 0.8rem; color: rgba(253,251,246,0.5); margin-top: 0.3rem; }
+    .event-notice { background: rgba(247,222,143,0.1); border: 1px solid rgba(247,222,143,0.2); border-radius: 12px; padding: 0.85rem 1.25rem; margin-bottom: 2rem; font-size: 0.95rem; color: rgba(253,251,246,0.7); line-height: 1.6; }
+    .event-notice strong { color: var(--butter); }
     .event-buttons { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
-    .btn-event { display: inline-flex; align-items: center; gap: 0.4rem; font-family: 'Nunito', sans-serif; font-weight: 800; text-decoration: none; border-radius: 99px; transition: all 0.2s; cursor: pointer; border: none; padding: 1rem 2.25rem; font-size: 0.95rem; }
-    .btn-clay { background: var(--clay); color: white; }
-    .btn-clay:hover { background: #b0522e; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,96,58,0.4); }
-    .btn-outline-light { background: transparent; color: rgba(247,237,226,0.5); border: 1px solid rgba(247,237,226,0.2); font-size: 0.82rem; padding: 0.75rem 1.5rem; }
-    .btn-outline-light:hover { color: var(--sand); border-color: rgba(247,237,226,0.4); }
+    .btn-event { display: inline-flex; align-items: center; gap: 0.4rem; font-family: 'DM Sans', sans-serif; font-weight: 700; text-decoration: none; border-radius: 99px; transition: all 0.2s; cursor: pointer; border: none; padding: 1rem 2.25rem; font-size: 1rem; }
+    .btn-clay { background: var(--deep-sky); color: white; }
+    .btn-clay:hover { background: #4a8499; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(95,160,184,0.4); }
+    .btn-outline-light { background: transparent; color: rgba(253,251,246,0.7); border: 1px solid rgba(253,251,246,0.3); font-size: 0.9rem; padding: 0.75rem 1.5rem; }
+    .btn-outline-light:hover { color: var(--cream); border-color: rgba(253,251,246,0.6); }
 
-    /* ABOUT */
-    .about { background: var(--warm-wh); padding: 7rem 4rem; }
-    .about-inner { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 280px 1fr; gap: 5rem; align-items: start; }
-    .about-photo { width: 100%; max-width: 300px; height: auto; border-radius: 24px; display: block; box-shadow: 0 8px 32px rgba(59,35,20,0.12); }
-    .about h2 { font-family: 'Fraunces', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); color: var(--brown); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
-    .about p { font-size: 1rem; line-height: 1.85; color: var(--muted); margin-bottom: 1.1rem; }
-    .about p strong { color: var(--brown); font-weight: 800; }
-
-    /* CONTACT */
-    .involve { background: var(--clay); padding: 6rem 4rem; }
+    /* CONTACT / GET INVOLVED */
+    .involve { background: var(--butter); padding: 6rem 4rem; }
     .involve-inner { max-width: 1100px; margin: 0 auto; }
-    .involve-tag { display: inline-block; background: rgba(255,255,255,0.2); color: white; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.25rem; }
+    .involve-tag { display: inline-block; background: white; color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.25rem; }
     .involve-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; margin-top: 2rem; }
-    .involve h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: white; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
-    .involve-sub { color: rgba(255,255,255,0.6); font-size: 1rem; line-height: 1.7; margin-bottom: 2.5rem; }
+    .involve h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 800; color: var(--ink); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .involve-sub { color: var(--ink-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 2.5rem; }
     .involve-ways { display: flex; flex-direction: column; gap: 0.75rem; }
-    .involve-way { background: rgba(255,255,255,0.1); border-radius: 16px; padding: 1.25rem 1.5rem; }
-    .involve-way-title { font-size: 0.95rem; font-weight: 800; color: white; margin-bottom: 0.3rem; }
-    .involve-way-text { font-size: 0.83rem; color: rgba(255,255,255,0.6); line-height: 1.55; }
-    .contact-form-wrap { background: white; border-radius: 28px; padding: 2.75rem; }
-    .form-title { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 900; color: var(--brown); margin-bottom: 0.4rem; }
-    .form-sub { font-size: 0.88rem; color: var(--muted); margin-bottom: 2rem; line-height: 1.6; }
+    .involve-way { background: white; border: 1px solid rgba(43,58,69,0.08); border-radius: 16px; padding: 1.25rem 1.5rem; }
+    .involve-way-title { font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 800; color: var(--ink); margin-bottom: 0.3rem; }
+    .involve-way-text { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.55; }
+    
+    .contact-form-wrap { background: white; border-radius: 28px; padding: 2.75rem; box-shadow: 0 12px 40px rgba(43,58,69,0.06); }
+    .form-title { font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--ink); margin-bottom: 0.4rem; }
+    .form-sub { font-size: 0.95rem; color: var(--ink-muted); margin-bottom: 2rem; line-height: 1.6; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
-    .form-group label { font-size: 0.78rem; font-weight: 800; color: var(--brown); letter-spacing: 0.04em; text-transform: uppercase; }
-    .form-group input, .form-group select, .form-group textarea { padding: 0.85rem 1rem; border: 1.5px solid var(--sand); border-radius: 12px; font-family: 'Nunito', sans-serif; font-size: 0.9rem; color: var(--brown); background: var(--warm-wh); transition: border-color 0.2s; outline: none; }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--clay); }
+    .form-group label { font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 800; color: var(--ink); letter-spacing: 0.04em; text-transform: uppercase; }
+    .form-group input, .form-group select, .form-group textarea { padding: 0.85rem 1rem; border: 1.5px solid var(--ink-faint); border-radius: 12px; font-family: 'DM Sans', sans-serif; font-size: 1rem; color: var(--ink); background: var(--cream); transition: border-color 0.2s; outline: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--deep-sky); }
     .form-group textarea { resize: vertical; min-height: 90px; }
     .form-check-group { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.25rem; }
     .form-check { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; }
-    .form-check input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--clay); cursor: pointer; }
-    .form-check span { font-size: 0.83rem; color: var(--muted); font-weight: 600; }
-    .btn-submit { width: 100%; padding: 1.3rem 2rem; background: var(--clay); color: white; font-family: 'Nunito', sans-serif; font-size: 1.2rem; font-weight: 900; border: none; border-radius: 99px; cursor: pointer; transition: all 0.2s; margin-top: 1.25rem; }
-    .btn-submit:hover { background: #b0522e; transform: translateY(-2px); box-shadow: 0 10px 28px rgba(200,96,58,0.4); }
+    .form-check input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--deep-sky); cursor: pointer; }
+    .form-check span { font-size: 0.9rem; color: var(--ink-muted); font-weight: 600; }
+    .btn-submit { width: 100%; padding: 1.3rem 2rem; background: var(--deep-sky); color: white; font-family: 'DM Sans', sans-serif; font-size: 1.1rem; font-weight: 700; border: none; border-radius: 99px; cursor: pointer; transition: all 0.2s; margin-top: 1.25rem; }
+    .btn-submit:hover { background: #4a8499; transform: translateY(-2px); box-shadow: 0 10px 28px rgba(95,160,184,0.3); }
     .form-success { display: none; text-align: center; padding: 2rem; }
-    .form-success-title { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 900; color: var(--brown); margin-bottom: 0.5rem; }
-    .form-success-text { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
-    .form-follow { text-align: center; margin-top: 1.1rem; font-size: 0.82rem; color: var(--muted); }
-    .form-follow a { color: var(--clay); font-weight: 800; text-decoration: none; }
+    .form-success-title { font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--ink); margin-bottom: 0.5rem; }
+    .form-success-text { font-size: 1rem; color: var(--ink-muted); line-height: 1.6; }
+    .form-follow { text-align: center; margin-top: 1.1rem; font-size: 0.9rem; color: var(--ink-muted); }
+    .form-follow a { color: var(--deep-sky); font-weight: 700; text-decoration: none; }
     .form-follow a:hover { text-decoration: underline; }
 
     /* FOOTER */
-    footer { background: var(--brown); padding: 3rem 4rem; }
+    footer { background: var(--ink); padding: 3rem 4rem; }
     .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
-    .footer-logo { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 900; color: var(--sand); }
-    .footer-logo span { color: var(--peach); }
-    .footer-tagline { font-size: 0.8rem; color: rgba(247,237,226,0.45); margin-top: 0.2rem; }
+    .footer-logo { font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 900; color: var(--cream); text-decoration: none; }
+    .footer-logo span { color: var(--sky-blue); }
+    .footer-tagline { font-size: 0.9rem; color: rgba(253,251,246,0.6); margin-top: 0.2rem; }
     .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
-    .footer-links a { font-size: 0.82rem; font-weight: 700; color: rgba(247,237,226,0.5); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--peach); }
-    .footer-copy { font-size: 0.72rem; color: rgba(247,237,226,0.25); text-align: right; }
+    .footer-links a { font-size: 0.95rem; font-weight: 600; color: rgba(253,251,246,0.7); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--butter); }
+    .footer-copy { font-size: 0.85rem; color: rgba(253,251,246,0.4); text-align: right; }
 
     .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 900px) {
-      nav { padding: 1rem 1.25rem; }
+      nav { padding: 1rem 1.25rem; top: 44px; }
       .nav-links { display: none; }
-      .hero { grid-template-columns: 1fr; padding: 5rem 1.5rem 3rem; }
+      .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; }
       .hero-left { padding: 2rem 1.5rem; }
       .hero-right { padding: 1rem 1.5rem 2rem; }
-      .stat-card:nth-child(2) { margin-left: 0; }
-      .callout { padding: 3.5rem 1.5rem; }
-      .callout-body { grid-template-columns: 1fr; }
       .story { padding: 4rem 1.5rem; }
+      .matchmaker-text { font-size: 1.8rem; margin: 3rem 0 2rem; }
       .research { padding: 4rem 1.5rem; }
       .research-grid { grid-template-columns: 1fr; }
       .mission { padding: 4rem 1.5rem; }
       .mission-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-      .why { padding: 4rem 1.5rem; }
-      .why-stats { grid-template-columns: 1fr; }
       .event { padding: 4rem 1.5rem; }
       .event-details { grid-template-columns: 1fr; }
-      .about { padding: 4rem 1.5rem; }
-      .about-inner { grid-template-columns: 1fr; gap: 2rem; }
       .involve { padding: 4rem 1.5rem; }
       .involve-layout { grid-template-columns: 1fr; gap: 2.5rem; }
       .form-row { grid-template-columns: 1fr; }
@@ -273,314 +229,235 @@
 </head>
 <body>
 
-<!-- EMAIL POPUP -->
+<div class="top-banner">
+  <a href="#event">Join us at the Find Your Thing Fair on Oct 10! RSVP now &rarr;</a>
+</div>
+
 <div class="popup-overlay" id="popup-overlay">
   <div class="popup">
     <button class="popup-close" onclick="closePopup()" aria-label="Close">&#x2715;</button>
     <div id="popup-form-content">
       <div class="popup-eyebrow">Find Your Thing Fair</div>
       <h3>Be the first to know.</h3>
-      <p class="popup-sub">Drop your email and we will keep you posted on the fair date, venue, and everything Youth Connect CLE.</p>
+      <p class="popup-sub">Drop your email below and we'll keep you posted on the next fair date, venue, and all things Youth Connect CLE.</p>
       <form class="popup-form" id="popup-email-form" action="https://formspree.io/f/xeednvzw" method="POST">
         <input type="hidden" name="source" value="popup"/>
         <input type="email" name="email" placeholder="your@email.com" required/>
         <button type="submit">Count me in</button>
       </form>
-      <p class="popup-note">No spam. Just updates on the fair.</p>
+      <p class="popup-note">No spam. We promise. Just updates on the fair.</p>
     </div>
     <div class="popup-success" id="popup-success">
       <div style="font-size:2rem;margin-bottom:0.75rem;">&#127881;</div>
-      <div class="popup-success-title">You're in!</div>
-      <div class="popup-success-text">We'll be in touch when the fair date drops.</div>
+      <div class="popup-success-title">You're on the list!</div>
+      <div class="popup-success-text">Keep an eye on your inbox for updates. We can't wait to see you there.</div>
     </div>
   </div>
 </div>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-logo"><img src="data:image/png;base64,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" alt="Youth Connect CLE logo" style="width:32px;height:32px;border-radius:8px;vertical-align:middle;margin-right:8px;"/>Youth Connect <span>CLE</span></div>
+  <a href="#" class="nav-logo">Youth Connect CLE<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#story">Our Story</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#mission">Mission</a></li>
     <li><a href="#event">The Fair</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#contact" class="nav-cta">Get Involved</a></li>
+    <li><a href="#involved" class="nav-cta">Get Involved</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">Cleveland, Ohio</div>
-    <h1>Teen Connection.<br><em>Real Community.</em><br>Right Here.</h1>
-    <p class="hero-sub">Too many teens feel alone. <strong>Youth Connect CLE</strong> brings Greater Cleveland teens together through shared interests, free events, and spaces where every young person belongs.</p>
-    <a href="#contact" class="btn btn-primary">Get Involved</a>
-    <a href="#story" class="btn btn-soft">Our Story</a>
+  <div class="hero-left fade-up">
+    <h1>Find your people. <em>Offline.</em></h1>
+    <p class="hero-sub">We're a local nonprofit helping high schoolers build friendships, find their passions, and boost their social health through community events and connection fairs.</p>
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+      <a href="#event" class="btn btn-primary">See Next Event</a>
+      <a href="#story" class="btn btn-soft">Learn More</a>
+    </div>
   </div>
-  <div class="hero-right">
+  <div class="hero-right fade-up" style="transition-delay: 0.1s;">
     <div class="stat-card">
-      <div class="stat-bubble">1 in 2</div>
+      <div class="stat-bubble">1 in 3</div>
       <div>
-        <div style="font-family:'Fraunces',serif;font-weight:900;font-size:1.05rem;color:var(--brown);margin-bottom:0.2rem">Too Many Teens</div>
-        <div class="stat-text-label">report feeling lonely on a regular basis</div>
-        <div class="stat-source">U.S. Surgeon General Advisory, 2023</div>
+        <div class="stat-text-label">teens report not having a single close friend to lean on.</div>
       </div>
     </div>
     <div class="stat-card">
-      <div class="stat-bubble">+42%</div>
+      <div class="stat-bubble">3+ hrs</div>
       <div>
-        <div style="font-family:'Fraunces',serif;font-weight:900;font-size:1.05rem;color:var(--brown);margin-bottom:0.2rem">Rising Numbers</div>
-        <div class="stat-text-label">rise in teen depression since 2012</div>
-        <div class="stat-source">Twenge et al., Clinical Psychological Science, 2018</div>
+        <div class="stat-text-label">of daily screen time is linked to higher rates of anxiety.</div>
       </div>
     </div>
     <div class="stat-card">
-      <div class="stat-bubble">100%</div>
+      <div class="stat-bubble">15</div>
       <div>
-        <div style="font-family:'Fraunces',serif;font-weight:900;font-size:1.05rem;color:var(--brown);margin-bottom:0.2rem">Every Single Teen</div>
-        <div class="stat-text-label">deserves a place where they belong</div>
+        <div class="stat-text-label">The health impact of chronic loneliness equals smoking 15 cigarettes a day.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONNECTION CRISIS -->
-<section class="callout">
-  <div class="callout-inner">
-    <div class="callout-label">The Connection Crisis</div>
-    <div class="callout-headline">Almost <em>everything</em><br>is better together.</div>
-    <div class="callout-body">
-      <div class="callout-fact">
-        <div class="callout-fact-label">The Surgeon General said it</div>
-        <div class="callout-fact-text">In 2021 and 2023, the U.S. Surgeon General issued back-to-back advisories declaring teen loneliness a public health emergency.</div>
-      </div>
-      <div class="callout-fact">
-        <div class="callout-fact-label">Technology changed things</div>
-        <div class="callout-fact-text">Social media simulates connection while quietly replacing the effort real connection requires. Digital proximity is not the same as belonging.</div>
-      </div>
-      <div class="callout-fact">
-        <div class="callout-fact-label">But connection can be built</div>
-        <div class="callout-fact-text">Research shows loneliness is not permanent. Connection can be built intentionally, in the places teens already are, with the right spaces and people.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STORY -->
 <section class="story" id="story">
   <div class="story-inner fade-up">
-    <div class="story-eyebrow">Our Story</div>
-    <h2>It started on a playground swing.</h2>
-    <p>During the pandemic, our founder Eliana Fieldman felt profoundly alone. She was sitting on a swing at the playground when she found out school had shut down for three days. Three days turned into two weeks. Two weeks turned into a year.</p>
-    <p>When schools reopened, something settled. But Eliana noticed that for most teens, the disconnection did not end when the restrictions did. In many ways, it deepened. And technology made it harder to recover.</p>
-    <div class="story-pull">
-      <p>Loneliness taught me that connection is not passive. It is something we practice.</p>
-    </div>
-    <p>She started reading about social health almost obsessively. What she found was clear: teens are the loneliest generation on record, and the systems around them are not built to fix it. So she decided to build something herself.</p>
-    <p><strong>Youth Connect CLE</strong> is the result. A nonprofit dedicated to helping Greater Cleveland teens find their people, their interests, and their place in this city. Starting with the <strong>Find Your Thing Fair</strong> this fall.</p>
+    <div class="story-eyebrow">How We Started</div>
+    <h2>Let's be honest: being a teen right now is tough.</h2>
+    <p><strong>Between academic pressure, social media anxiety, and the lingering effects of a disconnected few years, finding a genuine community isn't as easy as it used to be.</strong> A lot of kids feel like they're the only ones sitting alone, when in reality, so many of their peers are feeling the exact same way.</p>
+    
+    <p>That's why we launched <strong>Youth Connect CLE</strong>, a Cleveland-based initiative dedicated to strengthening teen social health. We wanted to bridge the gap between teens who want friends and the incredible local clubs, groups, and hobbies scattered across our city.</p>
+    
+    <p>We are proud to be inspired by and aligned with the <a href="https://www.pghsocialhealth.org/" target="_blank" class="story-link">Pittsburgh Social Health Initiative</a>, exploring community-driven solutions to social isolation and measuring the impacts of connection on public health.</p>
+
+    <div class="matchmaker-text">Think of us as the ultimate community matchmakers.</div>
   </div>
 </section>
 
-<!-- RESEARCH -->
-<section class="research" id="research">
-  <div class="research-inner">
-    <div class="section-tag fade-up">Research</div>
-    <h2 class="fade-up">The Work Behind the Work.</h2>
-    <p class="research-sub fade-up">Youth Connect CLE is grounded in real research on adolescent loneliness, social health, and what actually helps.</p>
-    <div class="research-grid fade-up">
-      <a href="https://bit.ly/PracticeofBelongingBrief" target="_blank" class="resource-card">
-        <div class="resource-pill">Research Brief</div>
-        <div class="resource-title">The Practice of Belonging: Rebuilding Adolescent Connection in an Age of Isolation</div>
-        <div class="resource-desc">Eliana's capstone research brief, published through Laurel's Center for Research for Girls. Explores the teen loneliness crisis, the role of technology, and what actually works.</div>
-        <div class="resource-cta">Read the brief &rarr;</div>
-      </a>
+<section class="research" id="resources">
+  <div class="research-inner fade-up">
+    <div class="section-tag">Resources & Research</div>
+    <h2>Why social health matters.</h2>
+    <p class="research-sub">We <em>should</em> treat social health just like physical or mental health. Research shows that strong, offline connections are the biggest predictors of long-term wellbeing in young adults.</p>
+    
+    <div class="research-grid">
       <a href="https://bit.ly/Resources4Connection" target="_blank" class="resource-card">
-        <div class="resource-pill">Resource Library</div>
-        <div class="resource-title">Resources for Connection</div>
-        <div class="resource-desc">A curated collection of research, articles, and tools on teen social health, loneliness, and belonging. Compiled by Eliana as part of her capstone work.</div>
-        <div class="resource-cta">Explore the library &rarr;</div>
+        <div class="resource-pill">Toolkit</div>
+        <h3 class="resource-title">Resources for Connection</h3>
+        <p class="resource-desc">A curated list of local groups, tools, and actionable steps to help teens jumpstart their journey to finding community.</p>
+        <div class="resource-cta">View Toolkit &rarr;</div>
+      </a>
+      <a href="https://bit.ly/PracticeofBelongingBrief" target="_blank" class="resource-card">
+        <div class="resource-pill">Brief</div>
+        <h3 class="resource-title">The Practice of Belonging</h3>
+        <p class="resource-desc">A student-led research brief authored by the founder of YCC, exploring actionable strategies for rebuilding adolescent connection.</p>
+        <div class="resource-cta">View the Findings &rarr;</div>
+      </a>
+      <a href="https://www.hhs.gov/surgeongeneral/priorities/connection/index.html" target="_blank" class="resource-card">
+        <div class="resource-pill">Article</div>
+        <h3 class="resource-title">The Epidemic of Loneliness</h3>
+        <p class="resource-desc">The Surgeon General declared loneliness a public health crisis, highlighting how adolescents are missing critical developmental milestones.</p>
+        <div class="resource-cta">Read the Report &rarr;</div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- MISSION -->
 <section class="mission" id="mission">
-  <div class="mission-inner">
-    <div class="fade-up">
-      <div class="section-tag">Who We Are</div>
-      <h2>Built for Belonging.</h2>
-      <p>Youth Connect CLE is a <strong>Cleveland-based nonprofit</strong> dedicated to strengthening teen social health. We connect young people to organizations, opportunities, and each other.</p>
-      <div class="pull-quote">
-        <p>You don't need to change who you are to find your people. You just need a place to connect.</p>
-      </div>
-      <p>Our work is inspired by the model of <a href="https://www.pghsocialhealth.org/" target="_blank" style="color:var(--clay);font-weight:800;text-decoration:none;">Pittsburgh Social Health</a>, which centers social connection as a vital part of well-being. We believe social health deserves the same attention as physical and mental health.</p>
+  <div class="mission-inner fade-up">
+    <div>
+      <h2>Our mission is simple: get teens together.</h2>
+      <p>We're dedicated to helping Cleveland's youth build meaningful relationships through shared interests and safe environments. No algorithms, no filters. Just real people finding their thing.</p>
     </div>
-    <div class="pillars fade-up">
+    <div class="pillars">
       <div class="pillar">
-        <div class="pillar-dot" style="background:var(--clay)"></div>
-        <div><div class="pillar-title">Social Health First</div><div class="pillar-text">Connection is a protective factor. When teens feel seen and included, they thrive in every area of life.</div></div>
+        <h3 class="pillar-title">Accessible to Everyone</h3>
+        <div class="pillar-text">The Find Your Thing Fair is a completely free connection fair for teens across greater Cleveland. We ensure you have a place to show up without barriers—including easy accessibility via RTA public transit right to the CPL Downtown.</div>
       </div>
       <div class="pillar">
-        <div class="pillar-dot" style="background:var(--sage)"></div>
-        <div><div class="pillar-title">Cleveland Proud</div><div class="pillar-text">We work across Greater Cleveland, connecting teens across schools and neighborhoods that rarely get to meet.</div></div>
+        <h3 class="pillar-title">Interest-Driven Connections</h3>
+        <div class="pillar-text">Whether you are looking for your people, your passion, or your next opportunity, this is the place to find it. We connect you with incredible local organizations to match your vibe.</div>
       </div>
       <div class="pillar">
-        <div class="pillar-dot" style="background:var(--peach)"></div>
-        <div><div class="pillar-title">Interest-Driven</div><div class="pillar-text">Shared interests are shared ground. We use what teens already love as the on-ramp to community.</div></div>
-      </div>
-      <div class="pillar">
-        <div class="pillar-dot" style="background:var(--clay)"></div>
-        <div><div class="pillar-title">Research-Backed</div><div class="pillar-text">Everything we do is grounded in the science of social connection and adolescent well-being.</div></div>
+        <h3 class="pillar-title">Safe and Supportive</h3>
+        <div class="pillar-text">We help teens find familiar, welcoming 'third spaces' that foster belonging. Research shows that regular presence in these spaces creates familiarity and increases adolescent social well-being.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY IT MATTERS -->
-<section class="why" id="why">
-  <div class="why-inner">
-    <div class="section-tag fade-up">Why It Matters</div>
-    <h2 class="fade-up">Connection is Protection.</h2>
-    <p class="why-intro fade-up">Strong social connections reduce anxiety and depression, improve academic performance, and build resilience that lasts a lifetime.</p>
-    <div class="why-stats fade-up">
-      <div class="why-stat-box">
-        <div class="why-big-num">1 in 6</div>
-        <div class="why-big-label">people worldwide experience loneliness. Teens are the most affected group.</div>
-        <div class="why-big-source">WHO Commission on Social Connection, 2025</div>
-      </div>
-      <div class="why-stat-box">
-        <div class="why-big-num">3x</div>
-        <div class="why-big-label">higher risk of depression and anxiety among isolated teens</div>
-        <div class="why-big-source">Loades et al., J. Am. Academy of Child &amp; Adolescent Psychiatry, 2020</div>
-      </div>
-      <div class="why-stat-box">
-        <div class="why-big-num">15 cigarettes</div>
-        <div class="why-big-label">chronic loneliness carries the same health risk as smoking 15 cigarettes a day</div>
-        <div class="why-big-source">Holt-Lunstad et al., PLOS Medicine, 2010</div>
-      </div>
-    </div>
-    <div class="why-closing fade-up">
-      Every teen in Cleveland deserves access to community, friendship, and spaces where they are welcomed exactly as they are. <strong>When teens feel connected, everything else gets easier.</strong>
-    </div>
-  </div>
-</section>
-
-<!-- THE FAIR -->
 <section class="event" id="event">
-  <div class="event-inner">
-    <div class="event-tag fade-up">Coming This Fall</div>
-    <h2 class="fade-up">Find Your <em>Thing</em> Fair.</h2>
-    <p class="event-sub fade-up">A free connection fair for teens across Greater Cleveland. Meet local organizations, discover programs you did not know existed, and leave with something that is actually meant for you.</p>
-    <div class="event-details fade-up">
+  <div class="event-inner fade-up">
+    <div class="event-tag">Our Signature Event</div>
+    <h2>The <em>Find Your Thing</em> Fair.</h2>
+    <p class="event-sub">Imagine a giant expo, but instead of college recruiters, it's packed with every cool club, hobby group, and youth organization in Cleveland. Come walk around, grab some food, and find your new weekend crew.</p>
+    
+    <div class="event-details">
       <div class="event-detail">
         <div class="event-detail-label">When</div>
-        <div class="event-detail-value">Mid-October 2026</div>
-        <div class="event-detail-note">Exact date coming soon</div>
+        <div class="event-detail-value">October 10</div>
+        <div class="event-detail-note">12:00 PM – 4:00 PM</div>
       </div>
       <div class="event-detail">
         <div class="event-detail-label">Where</div>
-        <div class="event-detail-value">Greater Cleveland</div>
-        <div class="event-detail-note">Venue to be announced</div>
+        <div class="event-detail-value">CPL Downtown</div>
+        <div class="event-detail-note">Cleveland Public Library</div>
       </div>
       <div class="event-detail">
-        <div class="event-detail-label">Cost</div>
-        <div class="event-detail-value">Free</div>
-        <div class="event-detail-note">Always. Open to all teens.</div>
+        <div class="event-detail-label">Requirements</div>
+        <div class="event-detail-value">RSVP Required</div>
+        <div class="event-detail-note">Open to ages 13–18</div>
       </div>
     </div>
-    <div class="event-notice fade-up">
-      <strong>Registration opening soon.</strong> Check back once the date and venue are confirmed, or sign up below to be the first to know. Once you register, add it to your calendar so you do not miss it.
+    
+    <div class="event-notice">
+      <strong>Heads up:</strong> Space is limited for this free event, so an RSVP is mandatory to get in the door. Grab your ticket now to secure your spot!
     </div>
-    <div class="event-buttons fade-up">
-      <a href="EVENTBRITE_LINK_HERE" target="_blank" class="btn-event btn-clay">Register on Eventbrite &rarr;</a>
-      <a href="PARTIFUL_LINK_HERE" target="_blank" class="btn-event btn-clay">RSVP on Partiful &rarr;</a>
-      <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Find+Your+Thing+Fair+%7C+Youth+Connect+CLE&dates=20261015/20261016&details=A+free+connection+fair+for+teens+across+Greater+Cleveland.+youthconnectcle.org&location=Greater+Cleveland%2C+OH" target="_blank" class="btn-event btn-outline-light">+ Add to calendar</a>
+    
+    <div class="event-buttons">
+      <a href="EVENTBRITE_LINK_HERE" target="_blank" class="btn-event btn-clay">RSVP on Eventbrite</a>
+      <button class="btn-event btn-outline-light" onclick="openPopup()">Join the Email List</button>
     </div>
   </div>
 </section>
 
-<!-- GET INVOLVED -->
-<section class="involve" id="contact">
-  <div class="involve-inner">
-    <div class="involve-tag fade-up">Join Us</div>
+<section class="involve" id="involved">
+  <div class="involve-inner fade-up">
+    <div class="involve-tag">Work With Us</div>
     <div class="involve-layout">
-      <div class="fade-up">
-        <h2>Get Involved.</h2>
-        <p class="involve-sub">There is a place for everyone in this work. Teens, parents, educators, and community partners are all welcome.</p>
+      <div>
+        <h2>Want to help out?</h2>
+        <p class="involve-sub">Whether you're an organization looking to set up a booth, a parent or teen wanting to volunteer, or a local business ready to sponsor, we'd love to chat.</p>
+        
         <div class="involve-ways">
           <div class="involve-way">
-            <div class="involve-way-title">Attend the fair</div>
-            <div class="involve-way-text">Free. Open to all teens. Coming this fall to Greater Cleveland.</div>
+            <h3 class="involve-way-title">Host a Booth</h3>
+            <div class="involve-way-text">Are you a club or organization that wants more teen members? Let's get you a table at the next fair.</div>
           </div>
           <div class="involve-way">
-            <div class="involve-way-title">Volunteer</div>
-            <div class="involve-way-text">Help us run events and create welcoming spaces. No experience needed.</div>
-          </div>
-          <div class="involve-way">
-            <div class="involve-way-title">Partner with us</div>
-            <div class="involve-way-text">Organizations, educators, and sponsors are essential to what we are building.</div>
-          </div>
-          <div class="involve-way">
-            <div class="involve-way-title">Spread the word</div>
-            <div class="involve-way-text">Share with a teen, a school, or an organization that should know about this.</div>
+            <h3 class="involve-way-title">Volunteer</h3>
+            <div class="involve-way-text">We need friendly faces (both teens and parents!) to help run check-in, hand out snacks, and make sure things run smoothly.</div>
           </div>
         </div>
       </div>
-      <div class="contact-form-wrap fade-up">
-        <div id="form-content">
-          <div class="form-title">Stay in the loop.</div>
-          <div class="form-sub">Sign up and we will keep you posted on the fair, future events, and everything Youth Connect CLE.</div>
-          <form id="contact-form" action="https://formspree.io/f/xeednvzw" method="POST">
-            <input type="hidden" name="source" value="main-form"/>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fname">First name</label>
-                <input type="text" id="fname" name="first_name" placeholder="First" required/>
-              </div>
-              <div class="form-group">
-                <label for="lname">Last name</label>
-                <input type="text" id="lname" name="last_name" placeholder="Last"/>
-              </div>
+      
+      <div class="contact-form-wrap">
+        <div class="form-title">Drop us a line.</div>
+        <p class="form-sub">Fill out the form below and someone from our team will get back to you within a few days.</p>
+        
+        <form id="contact-form" action="https://formspree.io/f/xeednvzw" method="POST">
+          <input type="hidden" name="source" value="contact_form"/>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" required/>
             </div>
             <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" id="email" name="email" placeholder="you@email.com" required/>
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" required/>
             </div>
-            <div class="form-group">
-              <label for="role">I am a...</label>
-              <select id="role" name="role">
-                <option value="">Select one</option>
-                <option>Teen</option>
-                <option>Parent or guardian</option>
-                <option>Educator</option>
-                <option>Organization or nonprofit</option>
-                <option>Community member</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>I am interested in...</label>
-              <div class="form-check-group">
-                <label class="form-check"><input type="checkbox" name="interest" value="Attending the fair"/><span>Attending the fair</span></label>
-                <label class="form-check"><input type="checkbox" name="interest" value="Volunteering"/><span>Volunteering</span></label>
-                <label class="form-check"><input type="checkbox" name="interest" value="Tabling or partnering"/><span>Tabling or partnering</span></label>
-                <label class="form-check"><input type="checkbox" name="interest" value="General updates"/><span>General updates</span></label>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="message">Anything else? (optional)</label>
-              <textarea id="message" name="message" placeholder="Tell us a bit about yourself or what you are looking for."></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Count me in &rarr;</button>
-          </form>
-          <div class="form-follow">
-            Follow along on <span style="color:var(--muted);font-weight:700;">Instagram (coming soon)</span> and <a href="https://substack.com/elianafieldman" target="_blank">Substack</a>.
           </div>
-        </div>
-        <div class="form-success" id="form-success">
-          <div style="font-size:2.5rem;margin-bottom:1rem;">&#127881;</div>
-          <div class="form-success-title">You're in!</div>
-          <div class="form-success-text">Thanks for signing up. We'll keep you posted on everything Find Your Thing Fair and Youth Connect CLE.</div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required/>
+          </div>
+          <div class="form-group">
+            <label for="role">I am a...</label>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="teen">Teen/Student</option>
+              <option value="parent">Parent/Guardian</option>
+              <option value="org">Local Organization/Club</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+        
+        <div class="form-success" id="contact-success">
+          <div class="form-success-title">Message Sent!</div>
+          <div class="form-success-text">Thanks for reaching out. We'll be in touch soon.</div>
         </div>
       </div>
     </div>
@@ -590,68 +467,94 @@
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-logo">Youth Connect <span>CLE</span></div>
-      <div class="footer-tagline">Teen Connection. Real Community. Right Here in Cleveland.</div>
+      <a href="#" class="footer-logo">Youth Connect CLE<span>.</span></a>
+      <div class="footer-tagline">Teen connection. Real community.</div>
     </div>
     <div class="footer-links">
       <a href="#story">Our Story</a>
+      <a href="#resources">Resources</a>
+      <a href="#mission">Mission</a>
       <a href="#event">The Fair</a>
-      <a href="#research">Research</a>
-      <a href="#contact">Get Involved</a>
+      <a href="#involved">Contact</a>
     </div>
-    <div class="footer-copy">2026 Youth Connect CLE<br>A Cleveland-based nonprofit</div>
+    <div class="footer-copy">
+      &copy; 2026 Youth Connect CLE. All rights reserved.
+    </div>
   </div>
 </footer>
 
 <script>
-  // Fade-up observer
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.12 });
+  // Animation Observer
+  const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  // Popup: show after 3 seconds, only once per session
-  function closePopup() {
-    document.getElementById('popup-overlay').classList.remove('active');
-    sessionStorage.setItem('popup-seen', '1');
-  }
-  if (!sessionStorage.getItem('popup-seen')) {
-    setTimeout(() => {
-      document.getElementById('popup-overlay').classList.add('active');
-    }, 3000);
-  }
-  document.getElementById('popup-overlay').addEventListener('click', function(e) {
-    if (e.target === this) closePopup();
+  // Popup Logic
+  const popupOverlay = document.getElementById('popup-overlay');
+  function openPopup() { popupOverlay.classList.add('active'); }
+  function closePopup() { popupOverlay.classList.remove('active'); }
+  
+  // Close popup if clicked outside
+  popupOverlay.addEventListener('click', (e) => {
+    if (e.target === popupOverlay) closePopup();
   });
 
-  // Popup form submission
-  document.getElementById('popup-email-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const data = new FormData(this);
-    try {
-      const res = await fetch(this.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
-      if (res.ok) {
-        document.getElementById('popup-form-content').style.display = 'none';
-        document.getElementById('popup-success').style.display = 'block';
-        sessionStorage.setItem('popup-seen', '1');
-        setTimeout(closePopup, 2500);
-      } else { alert('Something went wrong. Please try again.'); }
-    } catch { alert('Something went wrong. Please try again.'); }
-  });
+  // Automatically open the popup after 5 seconds
+  setTimeout(openPopup, 5000);
 
-  // Main contact form submission
-  document.getElementById('contact-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const data = new FormData(this);
-    try {
-      const res = await fetch(this.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
-      if (res.ok) {
-        document.getElementById('form-content').style.display = 'none';
-        document.getElementById('form-success').style.display = 'block';
-      } else { alert('Something went wrong. Please try again.'); }
-    } catch { alert('Something went wrong. Please try again.'); }
-  });
+  // Handle Formspree Submissions for Popup
+  const popupForm = document.getElementById('popup-email-form');
+  const popupContent = document.getElementById('popup-form-content');
+  const popupSuccess = document.getElementById('popup-success');
+
+  if(popupForm) {
+    popupForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(popupForm);
+      fetch(popupForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          popupContent.style.display = 'none';
+          popupSuccess.style.display = 'block';
+          popupForm.reset();
+        }
+      });
+    });
+  }
+
+  // Handle Formspree Submissions for Contact Form
+  const contactForm = document.getElementById('contact-form');
+  const contactSuccess = document.getElementById('contact-success');
+
+  if(contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(contactForm);
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          contactForm.style.display = 'none';
+          contactSuccess.style.display = 'block';
+          contactForm.reset();
+        }
+      });
+    });
+  }
 </script>
+
 </body>
 </html>
-<!-- ==================== END OF WEBSITE CODE ==================== -->
