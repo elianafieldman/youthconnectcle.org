@@ -64,7 +64,7 @@
     .popup-success-text { font-size: 0.95rem; color: var(--ink-muted); line-height: 1.6; }
 
     /* NAV */
-    nav { position: fixed; top: 38px; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2.5rem; background: var(--cream); border-bottom: 2px solid var(--ink-faint); box-shadow: 0 2px 20px rgba(43,58,69,0.04); transition: top 0.3s; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 1rem 2.5rem; background: var(--cream); border-bottom: 2px solid var(--ink-faint); box-shadow: 0 2px 20px rgba(43,58,69,0.04); transition: top 0.3s; }
     .nav-logo { font-family: 'Outfit', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--ink); letter-spacing: -0.02em; text-decoration: none; }
     .nav-logo span { color: var(--deep-sky); }
     .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
@@ -72,9 +72,10 @@
     .nav-links a:hover { color: var(--deep-sky); }
     .nav-cta { background: var(--deep-sky); color: white !important; padding: 0.5rem 1.2rem; border-radius: 99px; }
     .nav-cta:hover { background: #4a8499 !important; }
+    .nav-register { font-size: 1.05rem !important; font-weight: 800 !important; padding: 0.75rem 1.6rem !important; box-shadow: 0 4px 14px rgba(95,160,184,0.35); }
 
     /* HERO */
-    .hero { min-height: 100vh; background: var(--cream); display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; padding-top: 110px; position: relative; overflow: hidden; }
+    .hero { min-height: 100vh; background: var(--cream); display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; padding-top: 90px; position: relative; overflow: hidden; }
     .hero::before { content: ""; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(191,225,236,0.5) 0%, transparent 70%); top: -100px; right: -100px; pointer-events: none; }
     .hero::after { content: ""; position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(242,169,160,0.3) 0%, transparent 70%); bottom: -80px; left: 10%; pointer-events: none; }
     .hero-left { padding: 4rem 3rem 4rem 5rem; position: relative; z-index: 2; }
@@ -157,6 +158,58 @@
     .btn-outline-light { background: transparent; color: rgba(253,251,246,0.7); border: 1px solid rgba(253,251,246,0.3); font-size: 0.9rem; padding: 0.75rem 1.5rem; }
     .btn-outline-light:hover { color: var(--cream); border-color: rgba(253,251,246,0.6); }
 
+    /* COUNTDOWN */
+    .countdown { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .countdown-unit { background: rgba(255,255,255,0.08); border: 1px solid rgba(253,251,246,0.15); border-radius: 14px; padding: 0.9rem 1.1rem; min-width: 72px; text-align: center; }
+    .countdown-unit span { display: block; font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--butter); line-height: 1; }
+    .countdown-unit small { display: block; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(253,251,246,0.55); margin-top: 0.3rem; }
+    .countdown-label { font-size: 0.95rem; color: rgba(253,251,246,0.65); font-weight: 600; }
+
+    /* NOMINATE */
+    .nominate-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 3rem; }
+    .nominate-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(253,251,246,0.15); border-radius: 20px; padding: 1.75rem; }
+    .nominate-tag { display: inline-block; background: var(--blush); color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 99px; margin-bottom: 0.9rem; }
+    .nominate-title { font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--cream); margin-bottom: 0.6rem; }
+    .nominate-text { font-size: 0.92rem; color: rgba(253,251,246,0.65); line-height: 1.6; margin-bottom: 1.1rem; }
+    .nominate-link { color: var(--butter); font-weight: 700; text-decoration: none; font-size: 0.92rem; }
+    .nominate-link:hover { text-decoration: underline; }
+
+    .thriving-badge { display: inline-block; background: white; color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.25rem; }
+
+    /* FOUNDER */
+    .founder { padding: 6.5rem 4rem; background: var(--cream); }
+    .founder-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 3rem; align-items: center; }
+    .founder-photo { width: 100%; aspect-ratio: 1; border-radius: 24px; object-fit: cover; box-shadow: 0 8px 28px rgba(43,58,69,0.12); }
+    .founder h2 { font-family: 'Outfit', sans-serif; font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 800; color: var(--ink); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .founder p { font-size: 1rem; color: var(--ink-muted); line-height: 1.8; margin-bottom: 1.1rem; }
+    .founder p strong { color: var(--ink); font-weight: 700; }
+
+    /* PENDING PROGRAMS */
+    .pending { background: var(--blush); padding: 6rem 4rem; }
+    .pending-inner { max-width: 1100px; margin: 0 auto; }
+    .pending-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+    .pending-card { background: white; border-radius: 22px; padding: 1.9rem; }
+    .pending-pill { display: inline-block; background: var(--cream); color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.75rem; border-radius: 99px; margin-bottom: 0.9rem; }
+    .pending-title { font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 800; color: var(--ink); margin-bottom: 0.55rem; line-height: 1.3; }
+    .pending-text { font-size: 0.92rem; color: var(--ink-muted); line-height: 1.65; }
+    .pending-note { margin-top: 2rem; font-size: 0.9rem; color: var(--ink-muted); background: rgba(255,255,255,0.5); border-radius: 14px; padding: 1rem 1.25rem; }
+
+    /* DONATE */
+    .donate { background: var(--ink); padding: 6rem 4rem; text-align: center; }
+    .donate-inner { max-width: 700px; margin: 0 auto; }
+    .donate-tag { display: inline-block; background: rgba(95,160,184,0.25); color: var(--butter); font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.25rem; }
+    .donate h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; color: var(--cream); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .donate p { font-size: 1.05rem; color: rgba(253,251,246,0.7); line-height: 1.75; margin-bottom: 2rem; }
+
+    /* SOCIAL */
+    .social-links { display: flex; gap: 0.9rem; }
+    .social-links a { width: 38px; height: 38px; border-radius: 50%; background: rgba(253,251,246,0.1); display: flex; align-items: center; justify-content: center; color: var(--cream); text-decoration: none; font-size: 0.85rem; font-weight: 700; transition: background 0.2s; }
+    .social-links a:hover { background: var(--deep-sky); }
+
+    /* VOLUNTEER FORM */
+    .volunteer-embed { margin-top: 1rem; }
+    .volunteer-embed iframe { width: 100%; border: none; border-radius: 16px; min-height: 900px; background: white; }
+
     /* CONTACT / GET INVOLVED */
     .involve { background: var(--butter); padding: 6rem 4rem; }
     .involve-inner { max-width: 1100px; margin: 0 auto; }
@@ -206,7 +259,7 @@
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 900px) {
-      nav { padding: 1rem 1.25rem; top: 44px; }
+      nav { padding: 1rem 1.25rem; top: 0; }
       .nav-links { display: none; }
       .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; }
       .hero-left { padding: 2rem 1.5rem; }
@@ -219,6 +272,14 @@
       .mission-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .event { padding: 4rem 1.5rem; }
       .event-details { grid-template-columns: 1fr; }
+      .nominate-grid { grid-template-columns: 1fr; }
+      .countdown { gap: 0.75rem; }
+      .founder { padding: 4rem 1.5rem; }
+      .founder-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+      .founder-photo { max-width: 220px; margin: 0 auto; }
+      .pending { padding: 4rem 1.5rem; }
+      .pending-grid { grid-template-columns: 1fr; }
+      .donate { padding: 4rem 1.5rem; }
       .involve { padding: 4rem 1.5rem; }
       .involve-layout { grid-template-columns: 1fr; gap: 2.5rem; }
       .form-row { grid-template-columns: 1fr; }
@@ -232,23 +293,20 @@
 </head>
 <body>
 
-<div class="top-banner">
-  <a href="#event">Join us at the Find Your Thing Fair on Oct 10! RSVP now &rarr;</a>
-</div>
-
 <div class="popup-overlay" id="popup-overlay">
   <div class="popup">
     <button class="popup-close" onclick="closePopup()" aria-label="Close">&#x2715;</button>
     <div id="popup-form-content">
       <div class="popup-eyebrow">Find Your Thing Fair</div>
-      <h3>Be the first to know.</h3>
-      <p class="popup-sub">Drop your email below and we'll keep you posted on the next fair date, venue, and all things Youth Connect CLE.</p>
+      <h3>Don't miss out.</h3>
+      <p class="popup-sub">Join us October 10 at the CPL Learning Commons for a free connection fair built just for Cleveland teens. Space is limited, so RSVP now.</p>
+      <a href="https://www.eventbrite.com/e/find-your-thing-fair-tickets-1995244232209?aff=oddtdtcreator&keep_tld=true" target="_blank" class="btn btn-primary" style="display:block;text-align:center;margin-bottom:1rem;">RSVP on Eventbrite</a>
       <form class="popup-form" id="popup-email-form" action="https://formspree.io/f/xeednvzw" method="POST">
         <input type="hidden" name="source" value="popup"/>
         <input type="email" name="email" placeholder="your@email.com" required/>
         <button type="submit">Count me in</button>
       </form>
-      <p class="popup-note" style="margin-top: 1rem; font-size: 0.8rem; color: var(--ink-muted);">No spam. We promise. Just updates on the fair.</p>
+      <p class="popup-note" style="margin-top: 1rem; font-size: 0.8rem; color: var(--ink-muted);">Or drop your email for updates. No spam, we promise.</p>
     </div>
     <div class="popup-success" id="popup-success">
       <div style="font-size:2rem;margin-bottom:0.75rem;">&#127881;</div>
@@ -261,10 +319,11 @@
 <nav>
   <a href="#" class="nav-logo">Youth Connect CLE<span>.</span></a>
   <ul class="nav-links">
-    <li><a href="#story">Our Story</a></li>
-    <li><a href="#resources">Resources</a></li>
-    <li><a href="#mission">Mission</a></li>
     <li><a href="#event">The Fair</a></li>
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#founder">Founder</a></li>
+    <li><a href="#pending">What's Next</a></li>
+    <li><a href="#donate">Donate</a></li>
     <li><a href="#involved" class="nav-cta">Get Involved</a></li>
   </ul>
 </nav>
@@ -300,6 +359,64 @@
   </div>
 </section>
 
+<section class="event" id="event">
+  <div class="event-inner fade-up">
+    <div class="event-tag">Our Signature Event</div>
+    <h2>The <em>Find Your Thing</em> Fair.</h2>
+    <p class="event-sub">Imagine a giant expo, but instead of college recruiters, it's packed with every cool club, hobby group, and youth organization in Cleveland. Come walk around, grab some food, and find your new weekend crew.</p>
+
+    <div class="thriving-badge">Part of the Cleveland Mayor's Office Thriving Youth Series</div>
+    
+    <div class="event-details">
+      <div class="event-detail">
+        <div class="event-detail-label">When</div>
+        <div class="event-detail-value">October 10</div>
+        <div class="event-detail-note">12:00 PM – 4:00 PM</div>
+      </div>
+      <div class="event-detail">
+        <div class="event-detail-label">Where</div>
+        <div class="event-detail-value">CPL Learning Commons</div>
+        <div class="event-detail-note">325 Superior Ave, Cleveland</div>
+      </div>
+      <div class="event-detail">
+        <div class="event-detail-label">Requirements</div>
+        <div class="event-detail-value">RSVP Required</div>
+        <div class="event-detail-note">Open to ages 13–18</div>
+      </div>
+    </div>
+    
+    <div class="countdown" id="countdown">
+      <div class="countdown-unit"><span id="cd-days">--</span><small>days</small></div>
+      <div class="countdown-unit"><span id="cd-hours">--</span><small>hrs</small></div>
+      <div class="countdown-unit"><span id="cd-mins">--</span><small>min</small></div>
+      <div class="countdown-unit"><span id="cd-secs">--</span><small>sec</small></div>
+      <div class="countdown-label">until the Find Your Thing Fair</div>
+    </div>
+
+    <div class="event-notice">
+      <strong>Heads up:</strong> Space is limited for this free event, so an RSVP is mandatory to get in the door. Grab your ticket now to secure your spot!
+    </div>
+    
+    <div class="event-buttons">
+      <a href="https://www.eventbrite.com/e/find-your-thing-fair-tickets-1995244232209?aff=oddtdtcreator&keep_tld=true" target="_blank" class="btn-event btn-clay">RSVP on Eventbrite</a>
+      <button class="btn-event btn-outline-light" onclick="openPopup()">Join the Email List</button>
+    </div>
+
+    <div class="nominate-grid">
+      <div class="nominate-card">
+        <div class="nominate-tag">Teen Giveaway</div>
+        <h3 class="nominate-title">Bring the Most Friends</h3>
+        <p class="nominate-text">The teen who brings the most friends to the fair wins a $50 gift card. Come with your crew to win!</p>
+      </div>
+      <div class="nominate-card">
+        <div class="nominate-tag">Adult Giveaway</div>
+        <h3 class="nominate-title">Bring the Most Teens</h3>
+        <p class="nominate-text">The parent, teacher, or mentor who brings the most teens to the fair wins a $50 gift card. Round up your group and come!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="story" id="story">
   <div class="story-inner fade-up">
     <div class="story-eyebrow">How We Started</div>
@@ -311,6 +428,19 @@
     <p>We are proud to be inspired by and aligned with the <a href="https://www.pghsocialhealth.org/" target="_blank" class="story-link">Pittsburgh Social Health Initiative</a>, exploring community-driven solutions to social isolation and measuring the impacts of connection on public health.</p>
 
     <div class="matchmaker-text">Think of us as the ultimate community matchmakers.</div>
+  </div>
+</section>
+
+<section class="founder" id="founder">
+  <div class="founder-inner fade-up">
+    <img class="founder-photo" src="founder-photo-web.jpg" alt="Eliana Fieldman, founder of Youth Connect CLE"/>
+    <div>
+      <div class="story-eyebrow">Meet the Founder</div>
+      <h2>Started by a teen, for teens.</h2>
+      <p>Youth Connect CLE was founded and is led by <strong>Eliana Fieldman</strong>, a Cleveland-area high schooler who spent two years researching adolescent isolation through her school's Center for Research for Girls.</p>
+      <p>That research, published as <a href="https://bit.ly/PracticeofBelongingBrief" target="_blank" class="story-link">The Practice of Belonging</a>, draws on sociologist Mark Granovetter's weak ties theory and public health research on teen connection. Every part of the Find Your Thing Fair, from how table hosts interact with teens to the format of the fair itself, is built directly on that research.</p>
+      <p>This is a teen-led and teen-founded organization from the ground up, and every new program we launch is designed and driven by teens.</p>
+    </div>
   </div>
 </section>
 
@@ -366,38 +496,39 @@
   </div>
 </section>
 
-<section class="event" id="event">
-  <div class="event-inner fade-up">
-    <div class="event-tag">Our Signature Event</div>
-    <h2>The <em>Find Your Thing</em> Fair.</h2>
-    <p class="event-sub">Imagine a giant expo, but instead of college recruiters, it's packed with every cool club, hobby group, and youth organization in Cleveland. Come walk around, grab some food, and find your new weekend crew.</p>
-    
-    <div class="event-details">
-      <div class="event-detail">
-        <div class="event-detail-label">When</div>
-        <div class="event-detail-value">October 10</div>
-        <div class="event-detail-note">12:00 PM – 4:00 PM</div>
+
+<section class="pending" id="pending">
+  <div class="pending-inner fade-up">
+    <div class="section-tag">What's Next</div>
+    <h2>Beyond the fair.</h2>
+    <p class="research-sub">The Find Your Thing Fair is just the start. Here's what we're building next, all teen-led and teen-founded.</p>
+    <div class="pending-grid">
+      <div class="pending-card">
+        <div class="pending-pill">In Development</div>
+        <h3 class="pending-title">Club Seed Fund</h3>
+        <p class="pending-text">Micro-grants ($50&ndash;$150) to help teens launch their own clubs and neighborhood connection projects, from a pickup basketball game to a board game night. We supply the funding and a Connection Resource Kit, they handle local execution. We're seeking a foundation sponsor to get this off the ground.</p>
       </div>
-      <div class="event-detail">
-        <div class="event-detail-label">Where</div>
-        <div class="event-detail-value">CPL Downtown</div>
-        <div class="event-detail-note">Cleveland Public Library</div>
+      <div class="pending-card">
+        <div class="pending-pill">In Development</div>
+        <h3 class="pending-title">Peer Facilitator Corps</h3>
+        <p class="pending-text">A core group of teen ambassadors trained as connection facilitators for other Cleveland nonprofits. When partner organizations host events, our facilitators deploy icebreakers, prompt games, and human bingo cards, building our network's presence while supporting community partners.</p>
       </div>
-      <div class="event-detail">
-        <div class="event-detail-label">Requirements</div>
-        <div class="event-detail-value">RSVP Required</div>
-        <div class="event-detail-note">Open to ages 13–18</div>
+      <div class="pending-card">
+        <div class="pending-pill">In Development</div>
+        <h3 class="pending-title">Teen Storytelling & Podcast Series</h3>
+        <p class="pending-text">A monthly spotlight series, published via Substack, Spotify, or short-form video, translating our research into accessible stories &mdash; featuring local youth leaders, artists, and organizers sharing their connection journeys, mental health tips, and local impact stories.</p>
       </div>
     </div>
-    
-    <div class="event-notice">
-      <strong>Heads up:</strong> Space is limited for this free event, so an RSVP is mandatory to get in the door. Grab your ticket now to secure your spot!
-    </div>
-    
-    <div class="event-buttons">
-      <a href="https://www.eventbrite.com/e/find-your-thing-fair-tickets-1995244232209?aff=oddtdtcreator&keep_tld=true" target="_blank" class="btn-event btn-clay">RSVP on Eventbrite</a>
-      <button class="btn-event btn-outline-light" onclick="openPopup()">Join the Email List</button>
-    </div>
+    <div class="pending-note">We're also building a Youth Advisory Board and are in the process of filing for official 501(c)(3) nonprofit status.</div>
+  </div>
+</section>
+
+<section class="donate" id="donate">
+  <div class="donate-inner fade-up">
+    <div class="donate-tag">Support Our Work</div>
+    <h2>Fund a teen's whole year of connection.</h2>
+    <p>Every dollar goes directly toward free connection fairs, teen-led programs, and the Club Seed Fund. Youth Connect CLE is currently seeking fiscal sponsorship and finalizing 501(c)(3) status.</p>
+    <a href="https://formspree.io/f/xeednvzw" target="_blank" class="btn btn-primary">Donate Now</a>
   </div>
 </section>
 
@@ -413,6 +544,14 @@
           <div class="involve-way">
             <h3 class="involve-way-title">Host a Booth</h3>
             <div class="involve-way-text">Are you a club or organization that wants more teen members? Let's get you a spot at our next fair.</div>
+          </div>
+          <div class="involve-way">
+            <h3 class="involve-way-title">Volunteer</h3>
+            <div class="involve-way-text">Teens and adults both welcome. Fill out the volunteer form below to sign up for a shift at the fair.</div>
+            <div class="volunteer-embed">
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc41JsW0U2Ooy4QoflnYIU5teqG_BhtjdVeKbvIb5gloqoMrQ/viewform?embedded=true" title="Volunteer Sign-Up Form" loading="lazy"></iframe>
+              <p style="margin-top: 0.5rem; font-size: 0.85rem;"><a href="https://forms.gle/AKNmCnWfDRzB3Rw3A" target="_blank" class="story-link">Having trouble seeing the form? Open it directly &rarr;</a></p>
+            </div>
           </div>
         </div>
       </div>
@@ -454,9 +593,13 @@
     </div>
     <div class="footer-links">
       <a href="#story">Our Story</a>
-      <a href="#resources">Resources</a>
-      <a href="#mission">Mission</a>
+      <a href="#founder">Founder</a>
       <a href="#event">The Fair</a>
+      <a href="#pending">What's Next</a>
+      <a href="#donate">Donate</a>
+    </div>
+    <div class="social-links">
+      <a href="https://instagram.com/findyourthingfaircle" target="_blank" aria-label="Instagram">IG</a>
     </div>
     <div class="footer-copy">
       &copy; 2026 Youth Connect CLE.<br>All rights reserved.
@@ -465,6 +608,27 @@
 </footer>
 
 <script>
+  // Countdown to fair (Oct 10, 2026, 12:00 PM ET)
+  function updateCountdown() {
+    const target = new Date("2026-10-10T12:00:00-04:00").getTime();
+    const now = new Date().getTime();
+    const diff = target - now;
+    if (diff <= 0) {
+      document.getElementById('countdown').innerHTML = '<div class="countdown-label">The fair is here! See you there.</div>';
+      return;
+    }
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const secs = Math.floor((diff % (1000 * 60)) / 1000);
+    document.getElementById('cd-days').textContent = days;
+    document.getElementById('cd-hours').textContent = hours;
+    document.getElementById('cd-mins').textContent = mins;
+    document.getElementById('cd-secs').textContent = secs;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
   // Popup controls
   function openPopup() {
     document.getElementById('popup-overlay').classList.add('active');
@@ -473,6 +637,16 @@
   function closePopup() {
     document.getElementById('popup-overlay').classList.remove('active');
   }
+
+  // Auto-open the popup shortly after page load (once per browser session)
+  window.addEventListener('load', () => {
+    if (!sessionStorage.getItem('ycc_popup_shown')) {
+      setTimeout(() => {
+        openPopup();
+        sessionStorage.setItem('ycc_popup_shown', 'true');
+      }, 2500);
+    }
+  });
 
   // Fade-up scroll animation
   const observer = new IntersectionObserver((entries) => {
