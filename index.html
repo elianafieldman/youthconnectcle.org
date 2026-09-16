@@ -200,6 +200,7 @@
     .donate-tag { display: inline-block; background: rgba(95,160,184,0.25); color: var(--butter); font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.25rem; }
     .donate h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; color: var(--cream); line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 1rem; }
     .donate p { font-size: 1.05rem; color: rgba(253,251,246,0.7); line-height: 1.75; margin-bottom: 2rem; }
+    .donate-widget-wrap { background: white; border-radius: 20px; padding: 1.5rem; max-width: 480px; margin: 0 auto; }
 
     /* SOCIAL */
     .social-links { display: flex; gap: 0.9rem; }
@@ -528,7 +529,9 @@
     <div class="donate-tag">Support Our Work</div>
     <h2>Fund a teen's whole year of connection.</h2>
     <p>Every dollar goes directly toward free connection fairs, teen-led programs, and the Club Seed Fund. Youth Connect CLE is currently seeking fiscal sponsorship and finalizing 501(c)(3) status.</p>
-    <a href="https://formspree.io/f/xeednvzw" target="_blank" class="btn btn-primary">Donate Now</a>
+    <div class="donate-widget-wrap">
+      <script type="module" src="https://donorbox.org/widgets.js" async></script><dbox-widget campaign="youth-connect-cle" type="donation_form" enable-auto-scroll="true"></dbox-widget>
+    </div>
   </div>
 </section>
 
