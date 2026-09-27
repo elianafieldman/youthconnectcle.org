@@ -175,6 +175,10 @@
     .nominate-link:hover { text-decoration: underline; }
 
     .thriving-badge { display: inline-block; background: white; color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; margin-bottom: 1.25rem; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.25rem; }
+    .badge-row .thriving-badge { margin-bottom: 0; }
+    .sponsor-badge { display: inline-block; background: var(--butter); color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 99px; text-decoration: none; transition: background 0.2s; }
+    .sponsor-badge:hover { background: #f0d073; }
 
     /* FOUNDER */
     .founder { padding: 6.5rem 4rem; background: var(--cream); }
@@ -210,6 +214,58 @@
     /* VOLUNTEER FORM */
     .volunteer-embed { margin-top: 1rem; }
     .volunteer-embed iframe { width: 100%; border: none; border-radius: 16px; min-height: 900px; background: white; }
+
+    /* ABOUT */
+    .about { padding: 6.5rem 4rem; background: var(--cream); }
+    .about-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 3rem; align-items: center; }
+    .about-inner h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3.5vw, 3.2rem); font-weight: 800; color: var(--ink); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.25rem; }
+    .about-inner p { font-size: 1.05rem; line-height: 1.8; color: var(--ink-muted); margin-bottom: 1.25rem; }
+    .about-links { font-size: 0.95rem; }
+
+    /* DIRECTORY */
+    .directory { padding: 6.5rem 4rem; background: var(--sky-blue); }
+    .directory-inner { max-width: 900px; margin: 0 auto; }
+    .directory-toolbar { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin: 2rem 0 2rem; }
+    .directory-search { flex: 1; min-width: 220px; padding: 0.9rem 1.2rem; border: none; border-radius: 99px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ink); background: white; outline: none; box-shadow: 0 2px 10px rgba(43,58,69,0.06); }
+    .directory-list { display: flex; flex-direction: column; gap: 0.6rem; max-height: 520px; overflow-y: auto; padding-right: 0.25rem; }
+    .directory-item { background: white; border-radius: 16px; padding: 1.1rem 1.4rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; box-shadow: 0 2px 10px rgba(43,58,69,0.04); }
+    .directory-item-name { font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--ink); font-size: 1rem; }
+    .directory-item-desc { font-size: 0.85rem; color: var(--ink-muted); margin-top: 0.2rem; }
+    .directory-item-badge { flex-shrink: 0; background: var(--butter); color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 99px; white-space: nowrap; }
+    .directory-empty { text-align: center; color: var(--ink-muted); padding: 2rem; font-size: 0.95rem; }
+    .directory-letter-heading { font-family: 'Outfit', sans-serif; font-weight: 800; color: var(--deep-sky); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; margin: 0.9rem 0 0.2rem; padding-left: 0.3rem; }
+    .directory-letter-heading:first-child { margin-top: 0; }
+
+    /* QUIZ */
+    .quiz-section { padding: 7rem 4rem; background: var(--ink); position: relative; overflow: hidden; }
+    .quiz-section::before { content: ""; position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(247,222,143,0.12) 0%, transparent 70%); top: -120px; left: -120px; pointer-events: none; }
+    .quiz-inner { max-width: 700px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
+    .quiz-h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; color: var(--cream); line-height: 1.1; letter-spacing: -0.02em; margin: 1rem 0 0.75rem; }
+    .quiz-h2 em { color: var(--butter); font-style: italic; }
+    .quiz-intro-text { font-size: 1.05rem; color: rgba(253,251,246,0.7); line-height: 1.7; margin-bottom: 2.5rem; }
+    .quiz-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(253,251,246,0.15); border-radius: 28px; padding: 2.5rem 2rem; min-height: 340px; display: flex; flex-direction: column; justify-content: center; position: relative; }
+    .quiz-progress { display: flex; justify-content: center; gap: 0.5rem; margin-bottom: 1.75rem; }
+    .quiz-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(253,251,246,0.2); transition: background 0.2s, transform 0.2s; }
+    .quiz-dot.active { background: var(--butter); transform: scale(1.3); }
+    .quiz-dot.done { background: var(--deep-sky); }
+    .quiz-question-text { font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--cream); margin-bottom: 1.75rem; line-height: 1.35; }
+    .quiz-answers { display: flex; flex-direction: column; gap: 0.75rem; }
+    .quiz-answer-btn { background: rgba(255,255,255,0.07); border: 1.5px solid rgba(253,251,246,0.15); border-radius: 14px; padding: 1rem 1.25rem; color: var(--cream); font-family: 'DM Sans', sans-serif; font-size: 0.95rem; text-align: left; cursor: pointer; transition: all 0.15s; }
+    .quiz-answer-btn:hover { background: rgba(95,160,184,0.25); border-color: var(--deep-sky); transform: translateX(3px); }
+    .quiz-spinning-label { font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--butter); margin-bottom: 1.5rem; font-size: 1.05rem; }
+    .wheel-wrap { position: relative; width: 260px; height: 260px; margin: 0 auto; }
+    .wheel-pointer { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); font-size: 1.6rem; color: var(--butter); z-index: 2; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); }
+    .quiz-wheel-svg { width: 100%; height: 100%; border-radius: 50%; box-shadow: 0 0 0 6px rgba(253,251,246,0.12), 0 12px 40px rgba(0,0,0,0.35); }
+    .quiz-result { position: relative; padding-top: 0.5rem; }
+    #confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 500; }
+    .quiz-result-emoji { font-size: 3rem; margin-bottom: 0.25rem; }
+    .quiz-result-label { font-family: 'Outfit', sans-serif; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(253,251,246,0.5); }
+    .quiz-result-title { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 800; color: var(--butter); margin: 0.3rem 0 0.9rem; }
+    .quiz-result-desc { font-size: 1rem; color: rgba(253,251,246,0.75); line-height: 1.7; max-width: 480px; margin: 0 auto 1.75rem; }
+    .quiz-result-orgs { background: rgba(255,255,255,0.06); border-radius: 16px; padding: 1.25rem; margin-bottom: 1.75rem; }
+    .quiz-result-orgs-label { font-family: 'Outfit', sans-serif; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sky-blue); margin-bottom: 0.65rem; }
+    .quiz-result-orgs-list { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+    .quiz-result-org-pill { background: var(--deep-sky); color: white; font-size: 0.85rem; font-weight: 700; padding: 0.4rem 0.9rem; border-radius: 99px; }
 
     /* CONTACT / GET INVOLVED */
     .involve { background: var(--butter); padding: 6rem 4rem; }
@@ -277,7 +333,15 @@
       .countdown { gap: 0.75rem; }
       .founder { padding: 4rem 1.5rem; }
       .founder-inner { grid-template-columns: 1fr; gap: 1.5rem; }
+      .about { padding: 4rem 1.5rem; }
+      .about-inner { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
       .founder-photo { max-width: 220px; margin: 0 auto; }
+      .directory { padding: 4rem 1.5rem; }
+      .directory-toolbar { flex-direction: column; align-items: stretch; }
+      .directory-item { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+      .quiz-section { padding: 4rem 1.5rem; }
+      .quiz-card { padding: 1.75rem 1.25rem; }
+      .wheel-wrap { width: 220px; height: 220px; }
       .pending { padding: 4rem 1.5rem; }
       .pending-grid { grid-template-columns: 1fr; }
       .donate { padding: 4rem 1.5rem; }
@@ -321,10 +385,9 @@
   <a href="#" class="nav-logo">Youth Connect CLE<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#event">The Fair</a></li>
-    <li><a href="#story">Our Story</a></li>
-    <li><a href="#founder">Founder</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#find-your-org">Find Your Org</a></li>
     <li><a href="#pending">What's Next</a></li>
-    <li><a href="#donate">Donate</a></li>
     <li><a href="#involved" class="nav-cta">Get Involved</a></li>
   </ul>
 </nav>
@@ -335,7 +398,7 @@
     <p class="hero-sub">We're a local nonprofit helping high schoolers build friendships, find their passions, and boost their social health through community events and connection fairs.</p>
     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
       <a href="#event" class="btn btn-primary">See Next Event</a>
-      <a href="#story" class="btn btn-soft">Learn More</a>
+      <a href="#about" class="btn btn-soft">Learn More</a>
     </div>
   </div>
   <div class="hero-right fade-up" style="transition-delay: 0.1s;">
@@ -366,7 +429,10 @@
     <h2>The <em>Find Your Thing</em> Fair.</h2>
     <p class="event-sub">Imagine a giant expo, but instead of college recruiters, it's packed with every cool club, hobby group, and youth organization in Cleveland. Come walk around, grab some food, and find your new weekend crew.</p>
 
-    <div class="thriving-badge">Part of the Cleveland Mayor's Office Thriving Youth Series</div>
+    <div class="badge-row">
+      <div class="thriving-badge">Part of the Cleveland Mayor's Office Thriving Youth Series</div>
+      <a href="https://kutoafoundation.org/" target="_blank" class="sponsor-badge">Presented by Kutoa Foundation</a>
+    </div>
     
     <div class="event-details">
       <div class="event-detail">
@@ -418,84 +484,19 @@
   </div>
 </section>
 
-<section class="story" id="story">
-  <div class="story-inner fade-up">
-    <div class="story-eyebrow">How We Started</div>
-    <h2>Let's be honest: being a teen right now is tough.</h2>
-    <p><strong>Between academic pressure, social media anxiety, and the lingering effects of a disconnected few years, finding a genuine community isn't as easy as it used to be.</strong> A lot of kids feel like they're the only ones sitting alone, when in reality, so many of their peers are feeling the exact same way.</p>
-    
-    <p>That's why we launched <strong>Youth Connect CLE</strong>, a Cleveland-based initiative dedicated to strengthening teen social health. We wanted to bridge the gap between teens who want friends and the incredible local clubs, groups, and hobbies scattered across our city.</p>
-    
-    <p>We are proud to be inspired by and aligned with the <a href="https://www.pghsocialhealth.org/" target="_blank" class="story-link">Pittsburgh Social Health Initiative</a>, exploring community-driven solutions to social isolation and measuring the impacts of connection on public health.</p>
-
-    <div class="matchmaker-text">Think of us as the ultimate community matchmakers.</div>
-  </div>
-</section>
-
-<section class="founder" id="founder">
-  <div class="founder-inner fade-up">
-    <img class="founder-photo" src="founder-photo-web.jpg" alt="Eliana Fieldman, founder of Youth Connect CLE"/>
+<section class="about" id="about">
+  <div class="about-inner fade-up">
+    <img class="founder-photo about-photo" src="founder-photo-web.jpg" alt="Eliana Fieldman, founder of Youth Connect CLE"/>
     <div>
-      <div class="story-eyebrow">Meet the Founder</div>
-      <h2>Started by a teen, for teens.</h2>
-      <p>Youth Connect CLE was founded and is led by <strong>Eliana Fieldman</strong>, a Cleveland-area high schooler who spent two years researching adolescent isolation through her school's Center for Research for Girls.</p>
-      <p>That research, published as <a href="https://bit.ly/PracticeofBelongingBrief" target="_blank" class="story-link">The Practice of Belonging</a>, draws on sociologist Mark Granovetter's weak ties theory and public health research on teen connection. Every part of the Find Your Thing Fair, from how table hosts interact with teens to the format of the fair itself, is built directly on that research.</p>
-      <p>This is a teen-led and teen-founded organization from the ground up, and every new program we launch is designed and driven by teens.</p>
+      <div class="section-tag">About Us</div>
+      <h2>A teen-led nonprofit, built on real research.</h2>
+      <p>Youth Connect CLE was founded and is led by <strong>Eliana Fieldman</strong>, a Cleveland-area high schooler who spent two years researching adolescent isolation. That research became <a href="https://bit.ly/PracticeofBelongingBrief" target="_blank" class="story-link">The Practice of Belonging</a>, and it shapes everything we build, from the Find Your Thing Fair to every program on our roadmap.</p>
+      <p>Our mission is simple. Get Cleveland teens together in person, around things they actually care about. No algorithms, no filters. Just real people finding their thing.</p>
+      <p class="about-links">Want to go deeper? Read <a href="https://bit.ly/Resources4Connection" target="_blank" class="story-link">our connection toolkit</a> or the Surgeon General's <a href="https://www.hhs.gov/surgeongeneral/priorities/connection/index.html" target="_blank" class="story-link">report on the loneliness epidemic</a>.</p>
     </div>
   </div>
 </section>
 
-<section class="research" id="resources">
-  <div class="research-inner fade-up">
-    <div class="section-tag">Resources & Research</div>
-    <h2>Why social health matters.</h2>
-    <p class="research-sub">We <em>should</em> treat social health just like physical or mental health. Research shows that strong, offline connections are the biggest predictors of long-term wellbeing in young adults.</p>
-    
-    <div class="research-grid">
-      <a href="https://bit.ly/Resources4Connection" target="_blank" class="resource-card">
-        <div class="resource-pill">Toolkit</div>
-        <h3 class="resource-title">Resources for Connection</h3>
-        <p class="resource-desc">A curated list of local groups, tools, and actionable steps to help teens jumpstart their journey to finding community.</p>
-        <div class="resource-cta">View Toolkit &rarr;</div>
-      </a>
-      <a href="https://bit.ly/PracticeofBelongingBrief" target="_blank" class="resource-card">
-        <div class="resource-pill">Brief</div>
-        <h3 class="resource-title">The Practice of Belonging</h3>
-        <p class="resource-desc">A student-led research brief authored by the founder of YCC, exploring actionable strategies for rebuilding adolescent connection.</p>
-        <div class="resource-cta">View the Findings &rarr;</div>
-      </a>
-      <a href="https://www.hhs.gov/surgeongeneral/priorities/connection/index.html" target="_blank" class="resource-card">
-        <div class="resource-pill">Article</div>
-        <h3 class="resource-title">The Epidemic of Loneliness</h3>
-        <p class="resource-desc">The Surgeon General declared loneliness a public health crisis, highlighting how adolescents are missing critical developmental milestones.</p>
-        <div class="resource-cta">Read the Report &rarr;</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="mission" id="mission">
-  <div class="mission-inner fade-up">
-    <div>
-      <h2>Our mission is simple: get teens together.</h2>
-      <p>We're dedicated to helping Cleveland's youth build meaningful relationships through shared interests and safe environments. No algorithms, no filters. Just real people finding their thing.</p>
-    </div>
-    <div class="pillars">
-      <div class="pillar">
-        <h3 class="pillar-title">Accessible to Everyone</h3>
-        <div class="pillar-text">The Find Your Thing Fair is a completely free connection fair for teens across greater Cleveland. We ensure you have a place to show up without barriers—including easy accessibility via RTA public transit right to the CPL Downtown.</div>
-      </div>
-      <div class="pillar">
-        <h3 class="pillar-title">Interest-Driven Connections</h3>
-        <div class="pillar-text">Whether you are looking for your people, your passion, or your next opportunity, this is the place to find it. We connect you with incredible local organizations to match your vibe.</div>
-      </div>
-      <div class="pillar">
-        <h3 class="pillar-title">Safe and Supportive</h3>
-        <div class="pillar-text">We help teens find familiar, welcoming 'third spaces' that foster belonging. Research shows that regular presence in these spaces creates familiarity and increases adolescent social well-being.</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="pending" id="pending">
@@ -528,10 +529,8 @@
   <div class="donate-inner fade-up">
     <div class="donate-tag">Support Our Work</div>
     <h2>Fund a teen's whole year of connection.</h2>
-    <p>Every dollar goes directly toward free connection fairs, teen-led programs, and the Club Seed Fund. Youth Connect CLE is currently seeking fiscal sponsorship and finalizing 501(c)(3) status.</p>
-    <div class="donate-widget-wrap">
-      <script type="module" src="https://donorbox.org/widgets.js" async></script><dbox-widget campaign="youth-connect-cle" type="donation_form" enable-auto-scroll="true"></dbox-widget>
-    </div>
+    <p>Every dollar goes directly toward free connection fairs, teen-led programs, and the Club Seed Fund. Youth Connect CLE is currently seeking fiscal sponsorship and finalizing 501(c)(3) status. Want to help fund this work? Reach out and we'll get you set up.</p>
+    <a href="#involved" class="btn btn-primary">Get in Touch</a>
   </div>
 </section>
 
@@ -550,11 +549,7 @@
           </div>
           <div class="involve-way">
             <h3 class="involve-way-title">Volunteer</h3>
-            <div class="involve-way-text">Teens and adults both welcome. Fill out the volunteer form below to sign up for a shift at the fair.</div>
-            <div class="volunteer-embed">
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc41JsW0U2Ooy4QoflnYIU5teqG_BhtjdVeKbvIb5gloqoMrQ/viewform?embedded=true" title="Volunteer Sign-Up Form" loading="lazy"></iframe>
-              <p style="margin-top: 0.5rem; font-size: 0.85rem;"><a href="https://forms.gle/AKNmCnWfDRzB3Rw3A" target="_blank" class="story-link">Having trouble seeing the form? Open it directly &rarr;</a></p>
-            </div>
+            <div class="involve-way-text">Teens and adults both welcome. Reach out below and we'll get you set up with a shift.</div>
           </div>
         </div>
       </div>
@@ -595,11 +590,10 @@
       <div class="footer-tagline">Teen connection. Real community.</div>
     </div>
     <div class="footer-links">
-      <a href="#story">Our Story</a>
-      <a href="#founder">Founder</a>
+      <a href="#about">About</a>
+      <a href="#find-your-org">Find Your Org</a>
       <a href="#event">The Fair</a>
       <a href="#pending">What's Next</a>
-      <a href="#donate">Donate</a>
     </div>
     <div class="social-links">
       <a href="https://instagram.com/findyourthingfaircle" target="_blank" aria-label="Instagram">IG</a>
